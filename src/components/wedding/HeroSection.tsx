@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import mandalaImg from "@/assets/mandala-gold.png";
+import weddingPostageImg from "@/assets/wedding-postage.png";
 import flowersImg from "@/assets/flowers.png";
 import templeImg from "@/assets/temple-gopuram.png";
 import GoldenParticles from "./GoldenParticles";
@@ -43,13 +43,13 @@ const HeroSection = () => {
         initial={{ opacity: 0, x: -40 }} animate={{ opacity: 0.3, x: 0 }}
         transition={{ duration: 1.5 }} />
 
-      {/* ── Spinning mandala header ──────────────────────────────────── */}
-      <motion.img src={mandalaImg} alt="Gold mandala" aria-hidden
-        className="w-24 md:w-36 animate-spin-slow relative z-10"
-        style={{ opacity: 0.75, filter: "drop-shadow(0 0 20px hsl(45 70% 55% / 0.4))" }}
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 0.75 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
+      {/* ── Wedding Postage Header ──────────────────────────────────── */}
+      <motion.img src={weddingPostageImg} alt="Wedding Postage" aria-hidden
+        className="w-40 md:w-52 relative z-10"
+        style={{ opacity: 0.9, filter: "drop-shadow(0 0 20px hsl(45 70% 35% / 0.3))" }}
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 0.9, scale: 1 }}
+        transition={{ duration: 1.0 }}
       />
 
       {/* ── HERO couple names with Temple background ────────────────── */}

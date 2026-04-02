@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import coupleImg from "@/assets/couple-photo.png";
-import ovalFrameImg from "@/assets/oval-frame.png";
+import weddingPostageImg from "@/assets/wedding-postage.png";
 import mandalaImg from "@/assets/mandala-gold.png";
 import flowersImg from "@/assets/flowers.png";
 
@@ -52,43 +51,28 @@ const BrideGroomSection = () => {
           Bride &amp; Groom
         </motion.h2>
 
-        {/* Couple Portrait — frame on top, photo clipped inside */}
+        {/* Couple Portrait — Postage Stamp */}
         <motion.div
-          className="relative flex items-center justify-center"
-          style={{ width: "280px", height: "350px" }}
-          initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
-          whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+          className="relative flex items-center justify-center p-2 md:p-3 border border-gold/30 rounded-sm"
+          style={{ 
+            width: "300px", 
+            height: "300px",
+            background: "hsl(45 30% 15% / 0.3)",
+            boxShadow: "0 20px 50px -10px rgba(0,0,0,0.8), 0 0 20px rgba(184, 134, 11, 0.2)"
+          }}
+          initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
+          whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, type: "spring", stiffness: 100 }}
+          transition={{ duration: 1.2, type: "spring", stiffness: 80 }}
         >
-          {/* Photo clipped to oval — sits BEHIND frame */}
-          <div
-            className="absolute"
-            style={{
-              width: "47%",
-              height: "55%",
-              top: "18%",
-              left: "50%",
-              transform: "translateX(-50%)",
-              borderRadius: "50%",
-              overflow: "hidden",
-              zIndex: 1,
-            }}
-          >
-            <img
-              src={coupleImg}
-              alt="Pratheeksha & Atharvan"
-              className="w-full h-full object-cover object-top"
-              style={{ transform: "scale(1.08)" }}
-            />
-          </div>
-          {/* Oval frame — always on top */}
           <img
-            src={ovalFrameImg}
-            alt=""
-            className="absolute inset-0 w-full h-full object-contain pointer-events-none"
-            style={{ zIndex: 2 }}
+            src={weddingPostageImg}
+            alt="Pratheeksha & Atharvan"
+            className="w-full h-full object-contain"
           />
+          {/* Subtle gold corner decorations */}
+          <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-gold/40" />
+          <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-gold/40" />
         </motion.div>
 
 

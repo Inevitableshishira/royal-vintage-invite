@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import coupleImg from "@/assets/couple-photo.png";
-import ovalFrameImg from "@/assets/oval-frame.png";
+import weddingPostageImg from "@/assets/wedding-postage.png";
 import vintageTeal from "@/assets/vintage-car-teal.png";
 import vintageBlack from "@/assets/vintage-car-black.png";
 
@@ -31,18 +30,19 @@ const CoupleSection = () => {
 
       <div className="relative z-10 flex flex-col items-center">
         <motion.div
-          className="relative w-64 h-80 md:w-80 md:h-[26rem] flex items-center justify-center"
+          className="relative w-72 h-72 md:w-96 md:h-96 flex items-center justify-center p-2 border border-gold/20"
+          style={{ 
+            background: "hsl(45 30% 10% / 0.4)",
+            boxShadow: "0 30px 60px -12px rgba(0,0,0,0.9)"
+          }}
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="absolute inset-0 flex items-center justify-center z-0">
-            <div className="w-[52%] h-[62%] md:w-[54%] md:h-[64%] overflow-hidden rounded-[50%]">
-              <img src={coupleImg} alt="Pratheeksha & Atharvan" className="w-full h-full object-cover object-top scale-125" />
-            </div>
-          </div>
-          <img src={ovalFrameImg} alt="" className="absolute inset-0 w-full h-full object-contain z-10 pointer-events-none" />
+          <img src={weddingPostageImg} alt="Pratheeksha & Atharvan" className="w-full h-full object-contain" />
+          <div className="absolute -top-1 -right-1 w-8 h-8 border-t-2 border-r-2 border-gold/30" />
+          <div className="absolute -bottom-1 -left-1 w-8 h-8 border-b-2 border-l-2 border-gold/30" />
         </motion.div>
 
         <motion.div
