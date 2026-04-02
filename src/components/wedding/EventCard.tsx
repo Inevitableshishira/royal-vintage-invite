@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
-import ovalFrameImg from "@/assets/oval-frame.png";
 
 interface EventCardProps {
   title: string;
@@ -20,15 +19,13 @@ const EventCard = ({ title, icon, time, date, venue, index }: EventCardProps) =>
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.7, delay: index * 0.12, type: "spring", stiffness: 120 }}
     >
-      {/* Oval frame background */}
+      {/* Decorative oval frame - CSS only */}
       <div className="relative w-44 h-56 md:w-52 md:h-64 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
-        <motion.img
-          src={ovalFrameImg}
-          alt=""
-          className="absolute inset-0 w-full h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-500"
-          loading="lazy"
-          whileHover={{ rotate: [0, 1, -1, 0] }}
-          transition={{ duration: 0.6 }}
+        <div 
+          className="absolute inset-0 rounded-[50%] border border-gold/40 opacity-40 group-hover:opacity-100 transition-opacity duration-500"
+          style={{
+            boxShadow: "inset 0 0 15px hsl(45 70% 55% / 0.1), 0 0 15px hsl(45 70% 55% / 0.1)"
+          }}
         />
         <div className="relative z-10 text-center px-6">
           <motion.div
