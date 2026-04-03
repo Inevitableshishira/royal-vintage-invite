@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Hash, Sun, Users, Car } from "lucide-react";
 
 const items = [
-  { icon: Hash, title: "Hashtag", desc: "#KavyaWedsArjun" },
+  { icon: Hash, title: "Hashtag", desc: "#PRATHARVAN" },
   { icon: Sun, title: "Weather", desc: "Sunny, 27°C – 31°C" },
   { icon: Users, title: "Staff", desc: "Onsite team available 24/7" },
   { icon: Car, title: "Parking", desc: "Complimentary valet parking" },
