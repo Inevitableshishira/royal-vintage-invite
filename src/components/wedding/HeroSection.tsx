@@ -45,27 +45,34 @@ const HeroSection = () => {
 
       {/* ── Wedding Postage Header ──────────────────────────────────── */}
       <motion.img src={weddingPostageImg} alt="Wedding Postage" aria-hidden
-        className="w-40 md:w-52 relative z-10"
-        style={{ opacity: 0.9, filter: "drop-shadow(0 0 20px hsl(45 70% 35% / 0.3))" }}
+        className="w-40 md:w-52 relative z-10 pointer-events-none"
+        style={{ 
+          opacity: 0.9, 
+          filter: "drop-shadow(0 0 20px hsl(45 70% 35% / 0.3))",
+          willChange: "transform, opacity"
+        }}
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 0.9, scale: 1 }}
         transition={{ duration: 1.0 }}
+        loading="eager"
+        decoding="async"
       />
 
       {/* ── HERO couple names with Temple background ────────────────── */}
       <div className="relative mt-6 md:mt-10 w-full max-w-2xl">
 
-        {/* Original Temple image behind names */}
         <motion.div
           className="absolute inset-0 rounded-lg overflow-hidden pointer-events-none"
-          style={{ zIndex: 0, margin: "-20px -40px" }}
+          style={{ zIndex: 0, margin: "-20px -40px", willChange: "transform, opacity" }}
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 2 }}
         >
           <img src={templeImg} alt="" aria-hidden
             className="w-full h-full object-contain"
-            style={{ filter: "brightness(0.4) contrast(1.2)" }} />
+            style={{ filter: "brightness(0.4) contrast(1.2)" }}
+            loading="eager"
+            decoding="async" />
           {/* Vignette to blend edges */}
           <div className="absolute inset-0"
             style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, transparent 20%, hsl(270 30% 12% / 0.9) 100%)" }} />
@@ -97,8 +104,9 @@ const HeroSection = () => {
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
-              filter: "drop-shadow(0 0 20px rgba(0,0,0,0.8))",
+              textShadow: "0 4px 12px rgba(0,0,0,0.45)", // Lighter than filter: drop-shadow
               fontWeight: 400,
+              willChange: "transform, opacity"
             }}
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -114,18 +122,21 @@ const HeroSection = () => {
           </motion.p>
 
           <motion.h1
-            className="font-serif leading-tight"
+            className="font-serif text-gold-shimmer"
             style={{
-              fontSize: "clamp(2.5rem, 10vw, 6.5rem)",
+              fontSize: "clamp(3rem, 12vw, 8rem)",
               background: "linear-gradient(135deg, hsl(45 80% 70%), hsl(40 60% 90%), hsl(45 70% 55%))",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
-              filter: "drop-shadow(0 0 20px rgba(0,0,0,0.8))",
+              textShadow: "0 6px 16px rgba(0,0,0,0.5)", // Massive performance win over filter: drop-shadow
               fontWeight: 400,
+              willChange: "transform, opacity"
             }}
-            initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.4, delay: 1.2 }}>
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.4, delay: 1.2 }}
+          >
             Atharvan
           </motion.h1>
         </motion.div>

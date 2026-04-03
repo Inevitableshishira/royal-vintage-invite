@@ -29,8 +29,9 @@ const GoldenParticles = () => {
     let height = canvas.offsetHeight;
 
     const resize = () => {
-      width = canvas.offsetWidth;
-      height = canvas.offsetHeight;
+      if (!canvas) return;
+      width = canvas.offsetWidth || window.innerWidth;
+      height = canvas.offsetHeight || 600;
       canvas.width = width;
       canvas.height = height;
     };
@@ -62,7 +63,7 @@ const GoldenParticles = () => {
       ctx.clearRect(0, 0, width, height);
 
       // reduced spawn rate
-      if (particles.length < 45 && Math.random() < 0.25) {
+      if (particles.length < 25 && Math.random() < 0.2) {
         particles.push(spawnParticle());
       }
 
