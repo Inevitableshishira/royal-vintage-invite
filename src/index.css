@@ -168,7 +168,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto !important;
 }
 
 body {
@@ -177,4 +177,6 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
+  pointer-events: auto !important;
+  user-select: auto !important;
 }

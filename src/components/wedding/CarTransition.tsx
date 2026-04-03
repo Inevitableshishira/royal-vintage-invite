@@ -62,7 +62,7 @@ const CarTransition = ({
       style={{
         height: "280px", // Increased height
         background: `linear-gradient(180deg, ${fromColor}, ${toColor})`,
-        zIndex: 9999, // Absolute top to prevent page overlap
+        zIndex: 50, // Improved composition performance
         isolation: "isolate",
       }}
     >
