@@ -69,7 +69,7 @@ const EventsSection = () => {
               alt="" 
               className="absolute top-1/2 left-1/2 w-[300px] md:w-[500px] opacity-[0.04] pointer-events-none -translate-x-1/2 -translate-y-1/2"
               animate={{ rotate: 360 }} 
-              transition={{ duration: 30, repeat: Infinity, ease: "linear" }} 
+              transition={{ duration: 60, repeat: Infinity, ease: "linear" }} 
             />
             <motion.div className="absolute inset-0 rounded-full gold-glow opacity-40"
               animate={{ opacity: [0.2, 0.5, 0.2] }}

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import weddingPostageImg from "@/assets/wedding-postage.png";
 import flowersImg from "@/assets/flowers.png";
-import couplePhoto from "@/assets/couple-photo.png";
+import templeImg from "@/assets/temple-gopuram.png";
 import GoldenParticles from "./GoldenParticles";
 
 const HeroSection = () => {
@@ -68,10 +68,11 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 2 }}
         >
-          <img src={couplePhoto} alt="" aria-hidden
-            className="w-full h-full object-cover opacity-80" 
+          <img src={templeImg} alt="" aria-hidden
+            className="w-full h-full object-contain"
+            style={{ filter: "brightness(0.4) contrast(1.2)" }}
             loading="eager"
-            decoding="async"
+            decoding="async" 
           />
           {/* Vignette to blend edges */}
           <div className="absolute inset-0"
@@ -104,7 +105,7 @@ const HeroSection = () => {
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
-              textShadow: "0 4px 12px rgba(0,0,0,0.45)", // Lighter than filter: drop-shadow
+              filter: "drop-shadow(0 0 16px rgba(0,0,0,0.75))",
               fontWeight: 400,
               willChange: "transform, opacity"
             }}
@@ -129,7 +130,7 @@ const HeroSection = () => {
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
-              textShadow: "0 6px 16px rgba(0,0,0,0.5)", // Massive performance win over filter: drop-shadow
+              filter: "drop-shadow(0 0 16px rgba(0,0,0,0.75))",
               fontWeight: 400,
               willChange: "transform, opacity"
             }}
