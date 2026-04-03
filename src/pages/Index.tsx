@@ -17,7 +17,7 @@ const PageReveal = ({
   delay?: number;
 }) => (
   <motion.div
-    initial={{ opacity: 0, y: 15 }}
+    initial={{ opacity: 0, y: 0 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "0px" }}
     transition={{ duration: 0.6, delay, ease: "easeOut" }}
@@ -29,9 +29,9 @@ const PageReveal = ({
 
 const Index = () => {
   return (
-    <main className="relative overflow-x-hidden">
-      <FloatingLanterns />
-
+    <main className="relative block h-auto min-h-screen pointer-events-auto" style={{ scrollBehavior: "auto" }}>
+      {/* 🚀 Move fixed overlay to the bottom to prevent early interaction capture */}
+      
       {/* HERO — no reveal wrapper, loads immediately */}
       <HeroSection />
 
@@ -82,6 +82,9 @@ const Index = () => {
       <PageReveal delay={0.05}>
         <FooterSection />
       </PageReveal>
+
+      {/* Overlay - now at bottom */}
+      <FloatingLanterns />
     </main>
   );
 };

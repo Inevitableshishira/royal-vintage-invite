@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import weddingPostageImg from "@/assets/wedding-postage.png";
 import flowersImg from "@/assets/flowers.png";
-import templeImg from "@/assets/temple-gopuram.png";
+import couplePhoto from "@/assets/couple-photo.png";
 import GoldenParticles from "./GoldenParticles";
 
 const HeroSection = () => {
@@ -68,11 +68,11 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 2 }}
         >
-          <img src={templeImg} alt="" aria-hidden
-            className="w-full h-full object-contain"
-            style={{ filter: "brightness(0.4) contrast(1.2)" }}
+          <img src={couplePhoto} alt="" aria-hidden
+            className="w-full h-full object-cover opacity-80" 
             loading="eager"
-            decoding="async" />
+            decoding="async"
+          />
           {/* Vignette to blend edges */}
           <div className="absolute inset-0"
             style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, transparent 20%, hsl(270 30% 12% / 0.9) 100%)" }} />
