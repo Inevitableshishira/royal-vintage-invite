@@ -20,15 +20,14 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
         >
-          {Array.from({ length: 14 }).map((_, i) => {
-            const droop = Math.sin((i / 13) * Math.PI) * 18;
-            const isCenter = Math.abs(i - 6) < 3;
+          {Array.from({ length: 8 }).map((_, i) => {
+            const isCenter = Math.abs(i - 4) < 2;
             const flower = ["🌺", "🌸", "🌼", "🌺"][i % 4];
             return (
-              <motion.div key={i} className="flex flex-col items-center"
-                style={{ paddingTop: `${droop}px`, willChange: "transform" }}
-                animate={{ y: [0, isCenter ? -2 : -1, 0] }}
-                transition={{ duration: 3 + (i % 2) * 0.5, delay: i * 0.08, repeat: Infinity, ease: "easeInOut" }}>
+              <motion.div key={i} className="px-2"
+                style={{ willChange: "transform" }}
+                animate={{ y: [0, -2, 0] }}
+                transition={{ duration: 4, delay: i * 0.2, repeat: Infinity, ease: "easeInOut" }}>
                 <span style={{ fontSize: isCenter ? "16px" : "11px", opacity: 0.6 }}>{flower}</span>
               </motion.div>
             );
@@ -98,7 +97,7 @@ const HeroSection = () => {
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
-              filter: "drop-shadow(0 0 20px rgba(0,0,0,0.8))",
+              // filter: "drop-shadow(0 0 20px rgba(0,0,0,0.8))",
               fontWeight: 400,
             }}
             initial={{ opacity: 0, scale: 0.85 }}
@@ -122,7 +121,7 @@ const HeroSection = () => {
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
-              filter: "drop-shadow(0 0 20px rgba(0,0,0,0.8))",
+              // filter: "drop-shadow(0 0 20px rgba(0,0,0,0.8))",
               fontWeight: 400,
             }}
             initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }}

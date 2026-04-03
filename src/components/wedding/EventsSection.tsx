@@ -15,9 +15,11 @@ const EventsSection = () => {
       {/* Spinning mandala watermarks */}
       <motion.img src={mandalaImg} alt="" aria-hidden
         className="absolute -top-16 -right-16 w-56 opacity-[0.05] pointer-events-none"
+        style={{ willChange: "transform" }}
         animate={{ rotate: 360 }} transition={{ duration: 40, repeat: Infinity, ease: "linear" }} />
       <motion.img src={mandalaImg} alt="" aria-hidden
         className="absolute -bottom-16 -left-16 w-44 opacity-[0.04] pointer-events-none"
+        style={{ willChange: "transform" }}
         animate={{ rotate: -360 }} transition={{ duration: 50, repeat: Infinity, ease: "linear" }} />
       {/* Om watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.02]">
@@ -68,6 +70,7 @@ const EventsSection = () => {
               src={mandalaImg} 
               alt="" 
               className="absolute top-1/2 left-1/2 w-[300px] md:w-[500px] opacity-[0.04] pointer-events-none -translate-x-1/2 -translate-y-1/2"
+              style={{ willChange: "transform", transform: "translate(-50%, -50%)" }}
               animate={{ rotate: 360 }} 
               transition={{ duration: 60, repeat: Infinity, ease: "linear" }} 
             />

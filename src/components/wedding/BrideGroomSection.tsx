@@ -12,9 +12,11 @@ const BrideGroomSection = () => {
       {/* Spinning mandala watermarks */}
       <motion.img src={mandalaImg} alt="" aria-hidden
         className="absolute -top-20 -right-20 w-64 opacity-[0.05] pointer-events-none"
+        style={{ willChange: "transform" }}
         animate={{ rotate: 360 }} transition={{ duration: 35, repeat: Infinity, ease: "linear" }} />
       <motion.img src={mandalaImg} alt="" aria-hidden
         className="absolute -bottom-20 -left-20 w-52 opacity-[0.04] pointer-events-none"
+        style={{ willChange: "transform" }}
         animate={{ rotate: -360 }} transition={{ duration: 40, repeat: Infinity, ease: "linear" }} />
       {/* Om background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.02]">

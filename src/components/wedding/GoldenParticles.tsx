@@ -52,7 +52,7 @@ const GoldenParticles = () => {
     });
 
     // pre-fill fewer particles
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 20; i++) {
       const p = spawnParticle();
       p.life = Math.random() * p.maxLife;
       particles.push(p);
@@ -62,7 +62,7 @@ const GoldenParticles = () => {
       ctx.clearRect(0, 0, width, height);
 
       // reduced spawn rate
-      if (particles.length < 45 && Math.random() < 0.25) {
+      if (particles.length < 30 && Math.random() < 0.2) {
         particles.push(spawnParticle());
       }
 

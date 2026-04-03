@@ -9,8 +9,8 @@ const WEDDING_DATE = new Date("2026-05-08T09:30:00+05:30").getTime();
 const DivaFlame = ({ delay = 0 }: { delay?: number }) => (
   <motion.div
     animate={{ scaleY: [1, 1.3, 0.9, 1.2, 1], scaleX: [1, 0.85, 1.1, 0.9, 1] }}
-    transition={{ duration: 1.8, delay, repeat: Infinity, ease: "easeInOut" }}
-    style={{ transformOrigin: "bottom" }}
+    transition={{ duration: 3, delay, repeat: Infinity, ease: "easeInOut" }}
+    style={{ transformOrigin: "bottom", willChange: "transform" }}
   >
     <svg width="14" height="20" viewBox="0 0 14 20" aria-hidden>
       <ellipse cx="7" cy="15" rx="5" ry="4" fill="hsl(45 70% 35% / 0.6)" />
@@ -138,7 +138,7 @@ const CountdownSection = () => {
           {["🌼","✦","🌺","✦","🌸","✦","🌺","✦","🌼"].map((e, i) => (
             <motion.span key={i}
               animate={{ y: [0, i % 2 === 0 ? -3 : 2, 0] }}
-              transition={{ duration: 2 + i * 0.2, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               style={{
                 fontSize: e === "✦" ? "8px" : "16px",
                 color: e === "✦" ? "hsl(45 70% 55% / 0.35)" : undefined,
