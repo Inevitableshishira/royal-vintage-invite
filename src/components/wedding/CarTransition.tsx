@@ -25,10 +25,13 @@ const CarTransition = ({
   // Car drives Right-to-Left (flip=true)
   // X=110vw (Right side) at scroll start (0)
   // X=-110vw (Left side) at scroll end (1)
+  // Truly responsive travel: from just off-screen one side to just off-screen the other side
   const carX = useTransform(
     scrollYProgress,
     [0, 1],
-    flip ? ["110vw", "-110vw"] : ["-110vw", "110vw"]
+    flip 
+      ? ["100vw", "-250px"] // Start right, cross to left
+      : ["-250px", "100vw"] // Start left, cross to right
   );
   
   const carOpacity = useTransform(
@@ -83,7 +86,7 @@ const CarTransition = ({
 
         {/* Car container */}
         <motion.div
-          className="absolute w-full flex justify-center"
+          className="absolute flex"
           style={{
             x: carX,
             y: carY,
@@ -92,6 +95,7 @@ const CarTransition = ({
             scale: carScale,
             top: "20%",
             zIndex: 10,
+            left: 0, // Anchor to left edge of section for responsive calculations
           }}
         >
           <div className="relative">
@@ -109,7 +113,7 @@ const CarTransition = ({
             <img
               src={carImg}
               alt="vintage car"
-              className="w-56 md:w-80 relative z-20"
+              className="w-48 md:w-80 relative z-20"
               style={{
                 filter: "contrast(1.05) brightness(0.95) drop-shadow(0 15px 25px rgba(0,0,0,0.5))",
                 // Flip the face based on user feedback
