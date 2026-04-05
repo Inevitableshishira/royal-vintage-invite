@@ -26,6 +26,7 @@ const CarTransition = ({
   // X=110vw (Right side) at scroll start (0)
   // X=-110vw (Left side) at scroll end (1)
   // Truly responsive travel: from just off-screen one side to just off-screen the other side
+  // Truly responsive travel: from just off-screen one side to just off-screen the other side
   const carX = useTransform(
     scrollYProgress,
     [0, 1],
@@ -61,7 +62,7 @@ const CarTransition = ({
   return (
     <div
       ref={ref}
-      className="relative w-full pointer-events-none"
+      className="relative w-full overflow-hidden pointer-events-none"
       style={{
         height: "280px", // Increased height
         background: `linear-gradient(180deg, ${fromColor}, ${toColor})`,
@@ -95,7 +96,7 @@ const CarTransition = ({
             scale: carScale,
             top: "20%",
             zIndex: 10,
-            left: 0, // Anchor to left edge of section for responsive calculations
+            left: 0, // Anchor to absolute left for better multi-device handling
           }}
         >
           <div className="relative">
@@ -113,7 +114,7 @@ const CarTransition = ({
             <img
               src={carImg}
               alt="vintage car"
-              className="w-48 md:w-80 relative z-20"
+              className="w-56 md:w-80 relative z-20"
               style={{
                 filter: "contrast(1.05) brightness(0.95) drop-shadow(0 15px 25px rgba(0,0,0,0.5))",
                 // Flip the face based on user feedback

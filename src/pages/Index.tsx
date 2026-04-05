@@ -29,7 +29,7 @@ const PageReveal = ({
 
 const Index = () => {
   return (
-    <main className="relative block h-auto min-h-screen pointer-events-auto" style={{ scrollBehavior: "auto" }}>
+    <main className="relative block h-auto min-h-screen pointer-events-auto overflow-x-hidden w-full" style={{ scrollBehavior: "auto" }}>
       {/* 🚀 Move fixed overlay to the bottom to prevent early interaction capture */}
       
       {/* HERO — no reveal wrapper, loads immediately */}
