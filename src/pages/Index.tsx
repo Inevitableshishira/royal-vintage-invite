@@ -39,8 +39,8 @@ const Index = () => {
       <CarTransition
         carType="black"
         flip={true}
-        fromColor="hsl(270 30% 15%)"
-        toColor="hsl(270 25% 18%)"
+        fromColor="white"
+        toColor="white"
       />
 
       {/* BRIDE & GROOM */}
@@ -51,8 +51,8 @@ const Index = () => {
       {/* 🌺 Marigold mandala divider */}
       <TraditionalDivider
         variant="marigold"
-        fromColor="hsl(270 25% 18%)"
-        toColor="hsl(155 40% 12%)"
+        fromColor="white"
+        toColor="white"
       />
 
       {/* EVENTS */}
@@ -63,8 +63,8 @@ const Index = () => {
       {/* 🪔 Diya / lantern row divider */}
       <TraditionalDivider
         variant="diya"
-        fromColor="hsl(155 40% 12%)"
-        toColor="hsl(270 20% 15%)"
+        fromColor="white"
+        toColor="white"
       />
 
       {/* COUNTDOWN */}
@@ -75,8 +75,8 @@ const Index = () => {
       {/* ✦ Gold ornament divider before footer */}
       <TraditionalDivider
         variant="gopuram"
-        fromColor="hsl(270 20% 15%)"
-        toColor="hsl(215 50% 12%)"
+        fromColor="white"
+        toColor="white"
       />
 
       <PageReveal delay={0.05}>

@@ -51,7 +51,7 @@ const CountdownSection = () => {
   return (
     <section
       className="relative py-20 md:py-28 px-4 overflow-hidden"
-      style={{ background: "hsl(270 20% 15%)", zIndex: 0 }}
+      style={{ zIndex: 0 }}
     >
       {/* Mandala watermarks */}
       <img src={mandalaImg} alt="" aria-hidden

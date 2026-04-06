@@ -7,7 +7,7 @@ const BrideGroomSection = () => {
   return (
     <section
       className="relative py-20 md:py-32 px-4 overflow-hidden"
-      style={{ background: "linear-gradient(180deg, hsl(270 25% 18%), hsl(330 20% 25%), hsl(270 20% 15%))", zIndex: 0 }}
+      style={{ zIndex: 0 }}
     >
       {/* Spinning mandala watermarks */}
       <motion.img src={mandalaImg} alt="" aria-hidden

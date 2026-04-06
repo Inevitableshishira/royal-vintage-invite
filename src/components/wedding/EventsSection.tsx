@@ -11,7 +11,7 @@ const events = [
 
 const EventsSection = () => {
   return (
-    <section className="relative py-20 md:py-32 px-4 gradient-section-mint overflow-hidden" style={{ zIndex: 0 }}>
+    <section className="relative py-20 md:py-32 px-4 overflow-hidden" style={{ zIndex: 0 }}>
       {/* Spinning mandala watermarks */}
       <motion.img src={mandalaImg} alt="" aria-hidden
         className="absolute -top-16 -right-16 w-56 opacity-[0.05] pointer-events-none"

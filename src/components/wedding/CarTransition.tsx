@@ -13,8 +13,8 @@ interface CarTransitionProps {
 const CarTransition = ({
   flip = false,
   carType = "black",
-  fromColor = "hsl(160 30% 10%)",
-  toColor = "hsl(215 50% 12%)",
+  fromColor = "white",
+  toColor = "white",
 }: CarTransitionProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({

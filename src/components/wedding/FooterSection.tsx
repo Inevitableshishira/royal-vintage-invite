@@ -152,7 +152,7 @@ const FooterSection = () => {
   }));
 
   return (
-    <footer ref={ref} className="relative overflow-hidden" style={{ background: "hsl(215 50% 12%)", zIndex: 0 }}>
+    <footer ref={ref} className="relative overflow-hidden" style={{ zIndex: 0 }}>
 
       {/* ── Starfield ──────────────────────────────────────────────────────── */}
       <motion.div className="absolute inset-0 pointer-events-none" style={{ opacity: starsOp }}>

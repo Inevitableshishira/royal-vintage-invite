@@ -14,48 +14,48 @@
 
 @layer base {
   :root {
-    --background: 150 30% 8%;
-    --foreground: 45 30% 90%;
+    --background: 0 0% 100%;
+    --foreground: 150 45% 12%;
 
-    --card: 150 25% 12%;
-    --card-foreground: 45 30% 90%;
+    --card: 0 0% 100%;
+    --card-foreground: 150 45% 12%;
 
-    --popover: 150 25% 12%;
-    --popover-foreground: 45 30% 90%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 45% 12%;
 
-    --primary: 45 70% 55%;
-    --primary-foreground: 150 30% 8%;
+    --primary: 45 70% 40%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 160 35% 30%;
-    --secondary-foreground: 45 30% 90%;
+    --secondary: 160 35% 45%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 150 20% 18%;
-    --muted-foreground: 150 15% 55%;
+    --muted: 150 15% 94%;
+    --muted-foreground: 150 15% 40%;
 
-    --accent: 270 30% 70%;
-    --accent-foreground: 45 30% 95%;
+    --accent: 270 30% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 45 40% 35%;
-    --input: 150 20% 20%;
-    --ring: 45 70% 55%;
+    --border: 45 40% 80%;
+    --input: 150 20% 90%;
+    --ring: 45 70% 40%;
 
     --radius: 0.5rem;
 
-    /* Wedding-specific tokens */
-    --emerald: 160 45% 25%;
-    --emerald-deep: 155 50% 15%;
-    --mint: 160 40% 70%;
-    --lavender: 270 35% 75%;
-    --lavender-soft: 270 25% 88%;
-    --gold: 45 70% 55%;
-    --gold-light: 45 60% 75%;
-    --gold-dark: 40 65% 40%;
-    --navy: 215 50% 15%;
-    --cream: 40 40% 92%;
-    --rose: 340 40% 70%;
+    /* Wedding-specific tokens - darkened for white background */
+    --emerald: 160 45% 35%;
+    --emerald-deep: 155 50% 25%;
+    --mint: 160 45% 35%;
+    --lavender: 270 35% 40%;
+    --lavender-soft: 270 25% 94%;
+    --gold: 45 70% 35%;
+    --gold-light: 45 60% 50%;
+    --gold-dark: 40 65% 25%;
+    --navy: 215 50% 25%;
+    --cream: 40 40% 35%;
+    --rose: 340 40% 45%;
 
     --font-serif: "Cormorant Garamond", Georgia, serif;
     --font-sans: "Montserrat", system-ui, sans-serif;
@@ -127,16 +127,16 @@
     box-shadow: 0 0 25px hsl(var(--gold) / 0.5), 0 0 50px hsl(var(--gold) / 0.2);
   }
   .gradient-emerald-lavender {
-    background: linear-gradient(180deg, hsl(var(--emerald-deep)), hsl(var(--emerald)), hsl(270 30% 25%));
+    background: transparent;
   }
   .gradient-gold {
     background: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)), hsl(var(--gold-light)));
   }
   .gradient-section-mint {
-    background: linear-gradient(180deg, hsl(var(--emerald-deep)), hsl(160 30% 20%));
+    background: transparent;
   }
   .gradient-section-lavender {
-    background: linear-gradient(180deg, hsl(160 30% 20%), hsl(270 25% 18%));
+    background: transparent;
   }
 }
 
@@ -145,7 +145,7 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: hsl(var(--emerald-deep));
+  background: hsl(var(--muted));
 }
 ::-webkit-scrollbar-thumb {
   background: hsl(var(--gold) / 0.5);

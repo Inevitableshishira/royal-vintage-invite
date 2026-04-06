@@ -251,8 +251,8 @@ const GopuramDivider = ({
 // ── Main export ───────────────────────────────────────────────────────────────
 const TraditionalDivider = ({
   variant = "marigold",
-  fromColor = "hsl(160 30% 10%)",
-  toColor = "hsl(270 25% 18%)",
+  fromColor = "white",
+  toColor = "white",
 }: TraditionalDividerProps) => {
   if (variant === "diya")    return <DiyaDivider    fromColor={fromColor} toColor={toColor} />;
   if (variant === "gopuram") return <GopuramDivider fromColor={fromColor} toColor={toColor} />;

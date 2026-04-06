@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <section
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 py-16 md:py-24"
-      style={{ background: "hsl(270 30% 12%)", zIndex: 0 }}
+      style={{ zIndex: 0 }}
     >
       {/* ── Toran garland at top ─────────────────────────────────────── */}
       <motion.div
@@ -74,9 +74,8 @@ const HeroSection = () => {
             loading="eager"
             decoding="async" 
           />
-          {/* Vignette to blend edges */}
           <div className="absolute inset-0"
-            style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, transparent 20%, hsl(270 30% 12% / 0.9) 100%)" }} />
+            style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, transparent 20%, hsl(0 0% 100% / 0.9) 100%)" }} />
         </motion.div>
 
         {/* Golden particles behind text */}
@@ -184,9 +183,9 @@ const HeroSection = () => {
         </p>
       </motion.div>
 
-      {/* ── Bottom gradient fade into next section ───────────────────── */}
+      {/* ── Bottom white fade into next section ───────────────────── */}
       <div className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
-        style={{ background: "linear-gradient(0deg, hsl(270 30% 15%), transparent)", zIndex: 5 }} />
+        style={{ background: "linear-gradient(0deg, hsl(0 0% 100%), transparent)", zIndex: 5 }} />
     </section>
   );
 };
