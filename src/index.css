@@ -97,7 +97,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 413.5vw; /* Precision height for the top scene */
+    height: 400vw; /* Aligned exactly to the end of the top scene */
     background-image: linear-gradient(rgba(0,0,0,0.1), transparent 30%), url("./assets/wedding-background.png");
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -105,24 +105,8 @@
     z-index: -2;
     pointer-events: none;
     filter: contrast(1.05) brightness(1.02) saturate(1.05);
-    -webkit-mask-image: linear-gradient(to bottom, black 92%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 92%, transparent 100%);
-  }
-
-  /* Footer/Events Background Pattern - Perfect Join */
-  body::after {
-    content: "";
-    position: absolute;
-    top: 413.5vw; /* Starts exactly where the top image ends */
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("./assets/wedding-background-bottom-v2.png");
-    background-repeat: repeat;
-    background-size: 800px auto; /* Scaled for vintage detail */
-    z-index: -3;
-    pointer-events: none;
-    opacity: 0.9;
+    -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -191,11 +175,11 @@
 
   /* Glass overlay for cards — subtle readability layer */
   .section-glass {
-    background: rgba(10, 10, 20, 0.45);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    background: rgba(10, 25, 20, 0.4); /* Made slightly clearer to show background pattern */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border: 1px solid hsl(45 70% 55% / 0.15);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   }
 
   /* Gold tint filter for decorative motif SVGs */
@@ -250,4 +234,9 @@ body {
   pointer-events: auto !important;
   user-select: auto !important;
   touch-action: pan-y;
+  /* Use the Botanical pattern as the base tiling background */
+  background-image: url("./assets/wedding-background-bottom-v2.png");
+  background-repeat: repeat;
+  background-size: 800px auto;
+  background-attachment: scroll;
 }
