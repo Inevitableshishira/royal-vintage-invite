@@ -17,11 +17,10 @@ const PageReveal = ({
   delay?: number;
 }) => (
   <motion.div
-    initial={{ opacity: 0, y: 0 }}
+    initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "0px" }}
-    transition={{ duration: 0.6, delay, ease: "easeOut" }}
-    style={{ willChange: "transform, opacity" }}
+    viewport={{ once: true, margin: "-100px" }}
+    transition={{ duration: 0.8, delay, ease: "easeOut" }}
   >
     {children}
   </motion.div>
@@ -30,29 +29,40 @@ const PageReveal = ({
 const Index = () => {
   return (
     <main className="relative block h-auto min-h-screen pointer-events-auto overflow-x-hidden w-full" style={{ scrollBehavior: "auto" }}>
-      {/* 🚀 Move fixed overlay to the bottom to prevent early interaction capture */}
       
-      {/* HERO — no reveal wrapper, loads immediately */}
-      <HeroSection />
+      {/* HERO — absolutely positioned over the temple peak */}
+      <div className="absolute top-0 left-0 w-full z-10 pointer-events-none">
+        <HeroSection />
+      </div>
 
-      {/* 🚗 One vintage car — dramatic entrance between hero and bride/groom */}
-      <CarTransition
-        carType="black"
-        flip={true}
-        fromColor="white"
-        toColor="white"
-      />
+      {/* 
+        This spacer exactly anchors the next section to the "brown horizontal line" 
+        (the temple base) which is precisely 34% down the background image. 
+        Because the background is scaled to 100% width, the image height is ~414vw, 
+        and 34% of 414vw is roughly 140vw.
+      */}
+      <div style={{ height: "140vw", minHeight: "60vh", pointerEvents: "none" }} />
 
-      {/* BRIDE & GROOM */}
-      <PageReveal>
-        <BrideGroomSection />
-      </PageReveal>
+      {/* CAR TRANSITION — placed right on the brown horizontal line! */}
+      <div className="relative -mt-20 md:-mt-32 z-0 pointer-events-none">
+        <CarTransition carType="black" flip={true} fromColor="transparent" toColor="transparent" />
+      </div>
+
+      {/* BRIDE & GROOM — Starts EXACTLY at the temple base */}
+      <section
+        className="relative px-4 overflow-hidden"
+        style={{ zIndex: 10 }}
+      >
+        <PageReveal>
+          <BrideGroomSection />
+        </PageReveal>
+      </section>
 
       {/* 🌺 Marigold mandala divider */}
       <TraditionalDivider
         variant="marigold"
-        fromColor="white"
-        toColor="white"
+        fromColor="transparent"
+        toColor="transparent"
       />
 
       {/* EVENTS */}
@@ -63,8 +73,8 @@ const Index = () => {
       {/* 🪔 Diya / lantern row divider */}
       <TraditionalDivider
         variant="diya"
-        fromColor="white"
-        toColor="white"
+        fromColor="transparent"
+        toColor="transparent"
       />
 
       {/* COUNTDOWN */}
@@ -75,8 +85,8 @@ const Index = () => {
       {/* ✦ Gold ornament divider before footer */}
       <TraditionalDivider
         variant="gopuram"
-        fromColor="white"
-        toColor="white"
+        fromColor="transparent"
+        toColor="transparent"
       />
 
       <PageReveal delay={0.05}>

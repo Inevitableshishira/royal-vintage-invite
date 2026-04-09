@@ -74,6 +74,8 @@ export default {
       fontFamily: {
         serif: ["Cormorant Garamond", "Georgia", "serif"],
         sans: ["Montserrat", "system-ui", "sans-serif"],
+        heading: ["'Cinzel Decorative'", "Cormorant Garamond", "serif"],
+        cursive: ["'Great Vibes'", "cursive"],
       },
       borderRadius: {
         lg: "var(--radius)",

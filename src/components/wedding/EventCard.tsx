@@ -20,8 +20,8 @@ const EventCard = ({ title, icon, time, date, venue, index }: EventCardProps) =>
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.7, delay: index * 0.12, type: "spring", stiffness: 120 }}
     >
-      {/* Oval frame background */}
-      <div className="relative w-44 h-56 md:w-52 md:h-64 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+      {/* Oval frame background with glass effect */}
+      <div className="relative w-44 h-56 md:w-52 md:h-64 flex items-center justify-center transition-transform duration-500 group-hover:scale-105 section-glass rounded-[40%]">
         <motion.img
           src={ovalFrameImg}
           alt=""
@@ -43,9 +43,9 @@ const EventCard = ({ title, icon, time, date, venue, index }: EventCardProps) =>
           <p className="font-sans text-xs text-cream mt-2 opacity-80">{time}</p>
         </div>
       </div>
-      <div className="mt-3 text-center">
-        <p className="font-sans text-xs text-lavender">{date}</p>
-        <p className="font-sans text-xs text-mint mt-1">{venue}</p>
+      <div className="mt-4 text-center pb-2">
+        <p className="font-sans text-sm md:text-base font-bold text-cream tracking-wide">{date}</p>
+        <p className="font-sans text-sm md:text-base font-medium text-gold mt-1">{venue}</p>
         <a
           href={`https://maps.google.com/?q=${encodeURIComponent(venue + ", Sangameshwarpet")}`}
           target="_blank"

@@ -31,10 +31,10 @@ const EventsSection = () => {
         <motion.p className="font-sans text-[10px] tracking-[0.5em] uppercase text-center mb-3"
           style={{ color: "hsl(45 70% 55% / 0.5)" }}
           initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-          ✦ &nbsp; पवित्र उत्सव &nbsp; ✦
+          ✦ &nbsp; ಪವಿತ್ರ ಉತ್ಸವ &nbsp; ✦
         </motion.p>
         <motion.h2
-          className="font-serif text-3xl md:text-5xl text-center gold-shimmer mb-4"
+          className="font-serif text-5xl md:text-7xl text-center gold-shimmer mb-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -42,7 +42,7 @@ const EventsSection = () => {
           The Celebrations
         </motion.h2>
         <motion.p
-          className="font-sans text-sm text-center text-mint mb-16 tracking-widest uppercase"
+          className="font-sans text-sm text-center text-white/90 mb-16 tracking-widest uppercase"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
