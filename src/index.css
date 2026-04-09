@@ -98,26 +98,33 @@
     left: 0;
     right: 0;
     height: 400vw; /* Precision height for the top scene */
-    background-image: linear-gradient(rgba(0,0,0,0.1), transparent 30%), url("./assets/wedding-background.png");
+    /* Fades in from the top using the jade background color instead of black */
+    background-image: 
+      linear-gradient(to bottom, hsl(154 30% 10%) 0%, transparent 15%),
+      url("./assets/wedding-background.png");
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center top;
     z-index: -2;
     pointer-events: none;
     filter: contrast(1.05) brightness(1.02) saturate(1.05);
-    -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    /* Fades out into the next section using transparent blending */
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
   }
 
-  /* Specific Secondary Background - V3 Join */
+  /* Specific Secondary Background - V3 Join with Color Matching */
   body::after {
     content: "";
     position: absolute;
-    top: 400vw; /* Starts exactly where the top image ends */
+    top: 400vw; 
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("./assets/wedding-background-bottom-v3.png");
+    background-image: 
+      /* Fades in from top using the transition color */
+      linear-gradient(to bottom, transparent 0%, rgba(20, 35, 30, 0.4) 10%, transparent 100%),
+      url("./assets/wedding-background-bottom-v3.png");
     background-repeat: repeat;
     background-size: 600px auto; 
     z-index: -3;
