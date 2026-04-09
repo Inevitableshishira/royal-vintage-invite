@@ -91,14 +91,14 @@
   }
 
   /* Fixed Full-Screen Background — Maximum Clarity */
+  /* Background Scenery - Top Transition */
   body::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 400vw; /* Precision height for the top scene */
-    /* Fades in from the top using the jade background color instead of black */
+    height: 413.5vw; /* Precise aspect-ratio for royal vintage assets (1125:4652) */
     background-image: 
       linear-gradient(to bottom, hsl(154 30% 10%) 0%, transparent 15%),
       url("./assets/wedding-background.png");
@@ -108,25 +108,24 @@
     z-index: -2;
     pointer-events: none;
     filter: contrast(1.05) brightness(1.02) saturate(1.05);
-    /* Fades out into the next section using transparent blending */
-    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
   }
 
-  /* Specific Secondary Background - V3 Join with Color Matching */
+  /* Footer/Secondary Pattern - Targeted Mobile Sizing */
   body::after {
     content: "";
     position: absolute;
-    top: 400vw; 
+    top: 413.5vw; 
     left: 0;
     right: 0;
     bottom: 0;
     background-image: 
-      /* Fades in from top using the transition color */
       linear-gradient(to bottom, transparent 0%, rgba(20, 35, 30, 0.4) 10%, transparent 100%),
       url("./assets/wedding-background-bottom-v3.png");
     background-repeat: repeat;
-    background-size: 600px auto; 
+    /* Adjust pattern scale for mobile vs desktop */
+    background-size: clamp(300px, 100vw, 600px) auto; 
     z-index: -3;
     pointer-events: none;
   }
