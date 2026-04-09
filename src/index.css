@@ -97,16 +97,14 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 500vw; /* Increased coverage */
-    background-image: linear-gradient(rgba(0,0,0,0.2), transparent 40%), url("./assets/wedding-background.png");
+    height: 100%; /* Cover full page height, but image will stop when its own data ends due to no-repeat */
+    background-image: linear-gradient(rgba(0,0,0,0.1), transparent 30%), url("./assets/wedding-background.png");
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center top;
     z-index: -2;
     pointer-events: none;
     filter: contrast(1.05) brightness(1.02) saturate(1.05);
-    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent);
-    mask-image: linear-gradient(to bottom, black 85%, transparent);
   }
 
   h1, h2, h3, h4, h5, h6 {
