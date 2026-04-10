@@ -185,25 +185,43 @@ const FooterSection = () => {
 
         {/* ── 1. COUPLE NAMES HEADER ──────────────────────────────────────── */}
         <motion.div className="text-center"
-          initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }} transition={{ duration: 1 }}>
+          initial="hidden" whileInView="visible" viewport={{ once: true }}>
 
           <motion.p className="font-sans text-[10px] tracking-[0.6em] uppercase mb-4 text-shadow-adaptive font-bold"
-            style={{ color: "#0d2b21" }} /* Deep emerald for contrast on light pattern */
-            animate={{ opacity: [0.7, 1, 0.7] }}
-            transition={{ duration: 4, repeat: Infinity }}>
+            style={{ color: "#0d2b21" }}
+            variants={{
+              hidden: { opacity: 0, letterSpacing: "1em" },
+              visible: { opacity: 1, letterSpacing: "0.6em", transition: { duration: 1.2 } }
+            }}>
             ✦ &nbsp; ಶುಭ ವಿವಾಹ &nbsp; ✦
           </motion.p>
 
-          <h2 className="font-serif text-fluid-h2 gold-shimmer font-light italic leading-tight">
+          <motion.h2 
+            className="font-serif text-fluid-h2 gold-shimmer font-light italic leading-tight"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { delay: 0.3, duration: 0.8 } }
+            }}>
             Pratheeksha &amp; Atharvan
-          </h2>
-          <p className="font-serif text-fluid-body mt-3 font-bold" style={{ color: "#0d2b21" }}>
+          </motion.h2>
+          
+          <motion.p 
+            className="font-serif text-fluid-body mt-3 font-bold" style={{ color: "#0d2b21" }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { delay: 0.6, duration: 0.8 } }
+            }}>
             Friday, May 8, 2026
-          </p>
-          <p className="font-sans text-[10px] tracking-[0.3em] uppercase mt-2 px-4 font-bold" style={{ color: "#0d2b21" }}>
+          </motion.p>
+          
+          <motion.p 
+            className="font-sans text-[10px] tracking-[0.3em] uppercase mt-2 px-4 font-bold" style={{ color: "#0d2b21" }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { delay: 0.8, duration: 0.8 } }
+            }}>
             Khandya Planters' Club · Chikkamagaluru
-          </p>
+          </motion.p>
 
           <GoldDivider label="#PRATHARVAN" />
         </motion.div>
