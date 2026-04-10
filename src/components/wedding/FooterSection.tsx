@@ -188,20 +188,20 @@ const FooterSection = () => {
           initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }} transition={{ duration: 1 }}>
 
-          <motion.p className="font-sans text-[10px] tracking-[0.6em] uppercase mb-4 text-shadow-premium font-bold"
-            style={{ color: "hsl(var(--cream))" }}
+          <motion.p className="font-sans text-[10px] tracking-[0.6em] uppercase mb-4 text-shadow-adaptive font-bold"
+            style={{ color: "#0d2b21" }} /* Deep emerald for contrast on light pattern */
             animate={{ opacity: [0.7, 1, 0.7] }}
             transition={{ duration: 4, repeat: Infinity }}>
             ✦ &nbsp; ಶುಭ ವಿವಾಹ &nbsp; ✦
           </motion.p>
 
-          <h2 className="font-serif text-5xl md:text-7xl gold-shimmer font-light italic leading-tight">
+          <h2 className="font-serif text-fluid-h2 gold-shimmer font-light italic leading-tight text-shadow-adaptive">
             Pratheeksha &amp; Atharvan
           </h2>
-          <p className="font-serif text-xl md:text-2xl mt-3 text-shadow-premium" style={{ color: "hsl(var(--cream))" }}>
+          <p className="font-serif text-fluid-body mt-3 text-shadow-adaptive" style={{ color: "#0d2b21" }}>
             Friday, May 8, 2026
           </p>
-          <p className="font-sans text-xs tracking-[0.3em] uppercase mt-2 px-4 text-shadow-premium font-bold" style={{ color: "hsl(var(--cream))" }}>
+          <p className="font-sans text-[10px] tracking-[0.3em] uppercase mt-2 px-4 text-shadow-adaptive font-bold" style={{ color: "#0d2b21" }}>
             Khandya Planters' Club · Chikkamagaluru
           </p>
 

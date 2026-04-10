@@ -30,13 +30,13 @@ const EventsSection = () => {
       {/* Om watermark */}
 
       <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center">
-        <motion.p className="font-sans text-[10px] tracking-[0.5em] uppercase text-center mb-3 font-bold text-shadow-premium"
+        <motion.p className="font-sans text-[10px] tracking-[0.5em] uppercase text-center mb-3 font-bold text-shadow-adaptive"
           style={{ color: "hsl(var(--cream))" }}
           initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
           ✦ &nbsp; ಪವಿತ್ರ ಉತ್ಸವ &nbsp; ✦
         </motion.p>
         <motion.h2
-          className="font-feminine text-6xl md:text-8xl text-center gold-shimmer mb-6"
+          className="font-feminine text-fluid-h2 text-center gold-shimmer mb-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -44,7 +44,7 @@ const EventsSection = () => {
           The Celebrations
         </motion.h2>
         <motion.p
-          className="font-sans text-sm text-center text-cream mb-16 tracking-widest uppercase font-bold text-shadow-premium"
+          className="font-sans text-fluid-body text-center text-cream mb-16 tracking-widest uppercase font-bold text-shadow-adaptive"
           style={{ opacity: 0.95 }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

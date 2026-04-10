@@ -104,11 +104,27 @@
   .font-traditional {
     font-family: var(--font-traditional);
   }
+  /* Fluid Typography — Scales perfectly from mobile to desktop */
+  h1, .text-fluid-h1 {
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    line-height: 1.1;
+  }
+  h2, .text-fluid-h2 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    line-height: 1.2;
+  }
+  .text-fluid-body {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  }
+
   .text-gold {
     color: hsl(var(--gold));
   }
   .text-cream {
-    color: hsl(var(--cream));
+    color: #FFF8E7; /* Ivory ivory text for maximum premium feel */
+  }
+  .text-deep-emerald {
+    color: #0d2b21; /* Dark emerald for readability on light backgrounds */
   }
   .text-mint {
     color: hsl(var(--mint));
@@ -131,6 +147,12 @@
   .border-gold-light {
     border-color: hsl(var(--gold-light));
   }
+  
+  /* Precision Readability Shadows */
+  .text-shadow-adaptive {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+  
   .gold-glow {
     box-shadow: 0 0 20px hsl(var(--gold) / 0.3), 0 0 40px hsl(var(--gold) / 0.1);
   }
