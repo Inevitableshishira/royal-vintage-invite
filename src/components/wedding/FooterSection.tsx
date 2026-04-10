@@ -136,7 +136,8 @@ const BlessingCard = () => (
 
 // ─── Main FooterSection ───────────────────────────────────────────────────────
 const ModernAnimatedText = ({ text, delay = 0, fontSize }: { text: string; delay?: number; fontSize: string }) => {
-  const letters = Array.from(text);
+  const words = text.split(" ");
+  
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -144,11 +145,24 @@ const ModernAnimatedText = ({ text, delay = 0, fontSize }: { text: string; delay
       transition: { staggerChildren: 0.05, delayChildren: delay }
     }
   };
+
   const child = {
-    hidden: { opacity: 0, y: 20, filter: "blur(8px)", skewY: 2 },
+    hidden: { 
+      opacity: 0, 
+      y: 20, 
+      filter: "blur(8px)", 
+      skewY: 2 
+    },
     visible: { 
-      opacity: 1, y: 0, filter: "blur(0px)", skewY: 0,
-      transition: { type: "spring", damping: 15, stiffness: 100 }
+      opacity: 1, 
+      y: 0, 
+      filter: "blur(0px)", 
+      skewY: 0,
+      transition: { 
+        type: "spring", 
+        damping: 15, 
+        stiffness: 100 
+      }
     }
   };
   
@@ -160,22 +174,38 @@ const ModernAnimatedText = ({ text, delay = 0, fontSize }: { text: string; delay
     backgroundClip: "text",
     fontWeight: 400,
     filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.3))",
+    padding: "0.15em 0.05em",
+    margin: "-0.15em -0.05em",
   };
 
   return (
-    <motion.div variants={container} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex flex-wrap justify-center overflow-visible">
-      {letters.map((char, index) => (
-        <motion.span key={index} variants={child} className="inline-block"
-          style={{ 
-            ...textStyle,
-            whiteSpace: char === " " ? "pre" : "normal" 
-          }}>
-          {char}
-        </motion.span>
+    <motion.div
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="flex flex-wrap justify-center overflow-visible"
+    >
+      {words.map((word, wordIdx) => (
+        <span key={wordIdx} className="inline-block whitespace-nowrap overflow-visible">
+          {Array.from(word).map((char, charIdx) => (
+            <motion.span
+              key={charIdx}
+              variants={child}
+              className="inline-block font-feminine leading-[1.4] overflow-visible"
+              style={textStyle}
+            >
+              {char}
+            </motion.span>
+          ))}
+          {wordIdx < words.length - 1 && (
+            <span className="inline-block w-[0.25em]" aria-hidden="true" />
+          )}
+        </span>
       ))}
     </motion.div>
   );
-};
+  };
 
 const FooterSection = () => {
   const ref = useRef<HTMLDivElement>(null);

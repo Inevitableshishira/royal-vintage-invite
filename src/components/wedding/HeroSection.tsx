@@ -5,7 +5,7 @@ import templeImg from "@/assets/temple-gopuram.png";
 import { HeroMotifs } from "./DecorativeMotifs";
 
 const ModernAnimatedText = ({ text, delay = 0, fontSize }: { text: string; delay?: number; fontSize: string }) => {
-  const letters = Array.from(text);
+  const words = text.split(" ");
   
   const container = {
     hidden: { opacity: 0 },
@@ -44,7 +44,9 @@ const ModernAnimatedText = ({ text, delay = 0, fontSize }: { text: string; delay
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
     fontWeight: 400,
-    filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.3))", // Essential for visibility on busy backgrounds
+    filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.3))",
+    padding: "0.1em 0.05em", // Add padding to prevent font clipping
+    margin: "-0.1em -0.05em", // Counteract padding to keep spacing
   };
 
   return (
@@ -54,18 +56,23 @@ const ModernAnimatedText = ({ text, delay = 0, fontSize }: { text: string; delay
       animate="visible"
       className="flex flex-wrap justify-center overflow-visible"
     >
-      {letters.map((char, index) => (
-        <motion.span
-          key={index}
-          variants={child}
-          className="inline-block font-feminine leading-[1.1]"
-          style={{ 
-            ...textStyle,
-            whiteSpace: char === " " ? "pre" : "normal" 
-          }}
-        >
-          {char}
-        </motion.span>
+      {words.map((word, wordIdx) => (
+        <span key={wordIdx} className="inline-block whitespace-nowrap overflow-visible">
+          {Array.from(word).map((char, charIdx) => (
+            <motion.span
+              key={charIdx}
+              variants={child}
+              className="inline-block font-feminine leading-[1.3] overflow-visible"
+              style={textStyle}
+            >
+              {char}
+            </motion.span>
+          ))}
+          {/* Add space between words */}
+          {wordIdx < words.length - 1 && (
+            <span className="inline-block w-[0.25em]" aria-hidden="true" />
+          )}
+        </span>
       ))}
     </motion.div>
   );
