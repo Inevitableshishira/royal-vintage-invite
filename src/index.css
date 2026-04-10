@@ -205,7 +205,8 @@ html {
 }
 
 body {
-  @apply bg-background text-foreground;
+  background-color: #0d1a16;
+  @apply text-foreground;
   font-family: var(--font-sans);
   position: relative;
   min-height: 100vh;
@@ -215,4 +216,22 @@ body {
   pointer-events: auto !important;
   user-select: auto !important;
   touch-action: pan-y; /* Fix unresponsive scrolling on fast swipes */
+}
+
+/* Fixed Full-Screen Background Scenery — Maximum Reliability */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 413.5vw; /* Precise aspect-ratio for landscape scenery */
+  /* Single layer with color-matched bottom extension */
+  background-image: linear-gradient(to bottom, transparent 70%, #0d1a16 98%, #0d1a16 100%), url("./assets/wedding-background.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: -10;
+  pointer-events: none;
+  filter: contrast(1.05) brightness(1.02) saturate(1.05);
 }

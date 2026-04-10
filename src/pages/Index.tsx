@@ -8,8 +8,6 @@ import CarTransition from "@/components/wedding/CarTransition";
 import TraditionalDivider from "@/components/wedding/TraditionalDivider";
 import FooterSection from "@/components/wedding/FooterSection";
 
-import backgroundTopImg from "@/assets/wedding-background.png";
-
 // Reusable scroll-reveal wrapper with fade + lift effect
 const PageReveal = ({
   children,
@@ -30,29 +28,8 @@ const PageReveal = ({
 
 const Index = () => {
   return (
-    <main className="relative block h-auto min-h-screen pointer-events-auto overflow-x-hidden w-full max-w-[100vw] overflow-hidden bg-[#0d1a16]" style={{ scrollBehavior: "auto" }}>
+    <main className="relative block h-auto min-h-screen pointer-events-auto overflow-x-hidden w-full max-w-[100vw] overflow-hidden" style={{ scrollBehavior: "auto" }}>
       
-      {/* ── BACKGROUND LAYERS ────────────────── */}
-      {/* 1. Top Scenery Artwork */}
-      <div className="absolute top-0 left-0 right-0 z-[-10] pointer-events-none" 
-        style={{ 
-          height: "413.5vw",
-          backgroundImage: `url("${backgroundTopImg}")`,
-          backgroundSize: "100% auto",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center top",
-          filter: "contrast(1.05) brightness(1.02) saturate(1.05)"
-        }} 
-      />
-
-      {/* 2. Seamless Transition Fade — bridges scenery with solid background color */}
-      <div className="absolute top-0 left-0 right-0 z-[-5] pointer-events-none" 
-        style={{ 
-          height: "413.5vw",
-          backgroundImage: `linear-gradient(to bottom, transparent 65%, #0d1a16 98%, #0d1a16 100%)`
-        }} 
-      />
-
       {/* HERO — absolutely positioned over the temple peak */}
       <div className="absolute top-0 left-0 w-full z-10 pointer-events-none">
         <div className="pointer-events-auto">
