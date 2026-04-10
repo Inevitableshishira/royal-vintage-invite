@@ -218,36 +218,17 @@ body {
   touch-action: pan-y; /* Fix unresponsive scrolling on fast swipes */
 }
 
-/* ── DUAL BACKGROUND SYSTEM (ROBUST CSS VERSION) ────────────────── */
+/* ── DUAL BACKGROUND SYSTEM (STACKED VERSION) ────────────────── */
 
-/* Layer 1: Bottom Repeating Pattern (The Base) */
-body::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; /* Coiver the entire page length */
-  background-image: url("./assets/wedding-background-bottom-v4.jpg");
-  background-repeat: repeat;
-  background-size: 600px auto;
-  z-index: -10;
-  pointer-events: none;
-  opacity: 0.95;
-}
-
-/* Layer 2: Top Scenery Artwork (The Landscape) */
+/* Layer 1: Top SceneryArtwork — Displays fully at the top */
 body::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 413.5vw; /* Precise tall aspect for scenery */
-  /* Top fades in, bottom masks out into the pattern */
-  background-image: 
-    linear-gradient(to bottom, #0d1a16 0%, transparent 10%, transparent 90%, #0d1a16 100%),
-    url("./assets/firefly-bg.png");
+  height: 413.5vw; /* Total height of the scenery artwork */
+  background-image: url("./assets/firefly-bg.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center top;
@@ -256,4 +237,19 @@ body::before {
   filter: contrast(1.1) brightness(1.05) saturate(1.05);
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+}
+
+/* Layer 2: Bottom Pattern — Starts exactly where the scenery artwork ends */
+body::after {
+  content: "";
+  position: absolute;
+  top: 413.5vw; /* Anchor precisely to the bottom edge of the top image */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("./assets/wedding-background-bottom-v4.jpg");
+  background-repeat: repeat;
+  background-size: 600px auto;
+  z-index: -10;
+  pointer-events: none;
 }
