@@ -218,19 +218,23 @@ body {
   touch-action: pan-y; /* Fix unresponsive scrolling on fast swipes */
 }
 
-/* Full-Page Continuous Background — Maximum Reliability */
+/* Full-Page Continuous Background — Sharpened & Enhanced */
 body::before {
   content: "";
-  position: absolute; /* Scrolls with the page as requested */
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0; /* Extends to the very end of the content */
+  bottom: 0;
   background-image: url("./assets/firefly-bg.png");
   background-size: 100% auto;
-  background-repeat: repeat-y; /* Repeats vertically to fill any page length */
+  background-repeat: repeat-y;
   background-position: center top;
   z-index: -10;
   pointer-events: none;
-  filter: contrast(1.05) brightness(1.02) saturate(1.05);
+  /* Enhanced filters to remove blur and boost clarity */
+  filter: contrast(1.15) brightness(1.08) saturate(1.1) sharp(0.5); 
+  image-rendering: -webkit-optimize-contrast; /* Sharpening for Chrome/Safari */
+  image-rendering: crisp-edges;
+  transform: translateZ(0); /* Hardware acceleration for smoother, sharper rendering */
 }
