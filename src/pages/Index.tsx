@@ -8,7 +8,6 @@ import CarTransition from "@/components/wedding/CarTransition";
 import TraditionalDivider from "@/components/wedding/TraditionalDivider";
 import FooterSection from "@/components/wedding/FooterSection";
 
-import backgroundBottomImg from "@/assets/wedding-background-bottom-v3.png";
 import backgroundTopImg from "@/assets/wedding-background.png";
 
 // Reusable scroll-reveal wrapper with fade + lift effect
@@ -31,28 +30,17 @@ const PageReveal = ({
 
 const Index = () => {
   return (
-    <main className="relative block h-auto min-h-screen pointer-events-auto overflow-x-hidden w-full max-w-[100vw] overflow-hidden" style={{ scrollBehavior: "auto" }}>
+    <main className="relative block h-auto min-h-screen pointer-events-auto overflow-x-hidden w-full max-w-[100vw] overflow-hidden bg-[#0d1a16]" style={{ scrollBehavior: "auto" }}>
       
       {/* ── BACKGROUND LAYERS ────────────────── */}
-      {/* 1. Base Repeating Pattern — covers everything */}
-      <div className="fixed inset-0 z-[-10] pointer-events-none" 
-        style={{ 
-          backgroundImage: `url(${backgroundBottomImg})`,
-          backgroundRepeat: "repeat",
-          backgroundSize: "600px auto"
-        }} 
-      />
-
-      {/* 2. Top Scenery — absolute behind content */}
+      {/* 1. Top Scenery — absolute behind content, fades into solid bg color */}
       <div className="absolute top-0 left-0 right-0 z-[-5] pointer-events-none" 
         style={{ 
           height: "413.5vw",
-          backgroundImage: `linear-gradient(to bottom, hsl(154 30% 10%) 0%, transparent 15%), url(${backgroundTopImg})`,
+          backgroundImage: `linear-gradient(to bottom, transparent 80%, #0d1a16 100%), url(${backgroundTopImg})`,
           backgroundSize: "100% auto",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center top",
-          WebkitMaskImage: "linear-gradient(to bottom, black 95%, transparent 100%)",
-          maskImage: "linear-gradient(to bottom, black 95%, transparent 100%)",
           filter: "contrast(1.05) brightness(1.02) saturate(1.05)"
         }} 
       />
