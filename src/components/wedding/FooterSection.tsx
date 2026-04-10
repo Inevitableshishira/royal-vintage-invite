@@ -135,7 +135,7 @@ const BlessingCard = () => (
 );
 
 // ─── Main FooterSection ───────────────────────────────────────────────────────
-const ModernAnimatedText = ({ text, delay = 0 }: { text: string; delay?: number }) => {
+const ModernAnimatedText = ({ text, delay = 0, fontSize }: { text: string; delay?: number; fontSize: string }) => {
   const letters = Array.from(text);
   const container = {
     hidden: { opacity: 0 },
@@ -151,10 +151,25 @@ const ModernAnimatedText = ({ text, delay = 0 }: { text: string; delay?: number 
       transition: { type: "spring", damping: 15, stiffness: 100 }
     }
   };
+  
+  const textStyle: React.CSSProperties = {
+    fontSize: fontSize,
+    background: "linear-gradient(135deg, hsl(45 95% 75%), hsl(40 80% 95%), hsl(45 80% 60%))",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
+    fontWeight: 400,
+    filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.3))",
+  };
+
   return (
-    <motion.div variants={container} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex flex-wrap justify-center">
+    <motion.div variants={container} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex flex-wrap justify-center overflow-visible">
       {letters.map((char, index) => (
-        <motion.span key={index} variants={child} className="inline-block" style={{ whiteSpace: char === " " ? "pre" : "normal" }}>
+        <motion.span key={index} variants={child} className="inline-block"
+          style={{ 
+            ...textStyle,
+            whiteSpace: char === " " ? "pre" : "normal" 
+          }}>
           {char}
         </motion.span>
       ))}
@@ -213,8 +228,11 @@ const FooterSection = () => {
         {/* ── 1. COUPLE NAMES HEADER ──────────────────────────────────────── */}
         <div className="text-center">
 
-          <motion.p className="font-sans text-[10px] tracking-[0.6em] uppercase mb-4 text-shadow-adaptive font-bold"
-            style={{ color: "#0d2b21" }}
+          <motion.p className="font-sans text-[10px] tracking-[0.6em] uppercase mb-4 font-bold"
+            style={{ 
+              color: "#0d2b21",
+              textShadow: "0 1px 2px rgba(255,255,255,0.3)" 
+            }}
             initial={{ opacity: 0, letterSpacing: "1.2em", filter: "blur(6px)" }}
             whileInView={{ opacity: 1, letterSpacing: "0.6em", filter: "blur(0px)" }}
             viewport={{ once: true }}
@@ -222,9 +240,13 @@ const FooterSection = () => {
             ✦ &nbsp; ಶುಭ ವಿವಾಹ &nbsp; ✦
           </motion.p>
 
-          <h2 className="font-serif text-fluid-h2 gold-shimmer font-light italic leading-tight">
-             <ModernAnimatedText text="Pratheeksha & Atharvan" delay={0.3} />
-          </h2>
+          <div className="py-2">
+            <ModernAnimatedText 
+              text="Pratheeksha & Atharvan" 
+              delay={0.3} 
+              fontSize="var(--fluid-h2)"
+            />
+          </div>
           
           <motion.p 
             className="font-serif text-fluid-body mt-3 font-bold" style={{ color: "#0d2b21" }}
