@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import weddingPostageImg from "@/assets/couple-stamp.png";
 import mandalaImg from "@/assets/mandala-gold.png";
 import flowersImg from "@/assets/flowers.png";
-
+import { ModernAnimatedText } from "./AnimatedText";
 
 const BrideGroomSection = () => {
   return (
@@ -41,15 +41,13 @@ const BrideGroomSection = () => {
         >
           Meet the
         </motion.p>
-        <motion.h2
-          className="font-feminine text-6xl md:text-8xl gold-shimmer mb-12 md:mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-        >
-          Bride &amp; Groom
-        </motion.h2>
+        <div className="mb-12 md:mb-16">
+          <ModernAnimatedText 
+            text="Bride & Groom" 
+            fontSize="clamp(3.5rem, 10vw, 7rem)"
+            animateOnLoad={true}
+          />
+        </div>
 
         {/* Couple Portrait — Postage Stamp */}
         <div className="relative mx-auto mt-6">
@@ -80,7 +78,13 @@ const BrideGroomSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            <h3 className="font-feminine text-5xl md:text-6xl text-gold tracking-wide">Pratheeksha</h3>
+            <div className="mb-4">
+              <ModernAnimatedText 
+                text="Pratheeksha" 
+                fontSize="clamp(2.5rem, 8vw, 4.5rem)"
+                animateOnLoad={true}
+              />
+            </div>
             <div className="w-16 h-px bg-gold/50 mx-auto my-5" />
             <p className="font-traditional text-xl md:text-2xl text-cream opacity-100 leading-relaxed font-bold text-shadow-premium">
               Daughter of<br />
@@ -102,7 +106,13 @@ const BrideGroomSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <h3 className="font-feminine text-5xl md:text-6xl text-gold tracking-wide">Atharvan</h3>
+            <div className="mb-4">
+              <ModernAnimatedText 
+                text="Atharvan" 
+                fontSize="clamp(2.5rem, 8vw, 4.5rem)"
+                animateOnLoad={true}
+              />
+            </div>
             <div className="w-16 h-px bg-gold/50 mx-auto my-5" />
             <p className="font-traditional text-xl md:text-2xl text-cream opacity-100 leading-relaxed font-bold text-shadow-premium">
               Son of<br />

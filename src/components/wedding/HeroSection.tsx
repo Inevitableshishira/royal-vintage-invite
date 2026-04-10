@@ -36,6 +36,7 @@ const HeroSection = () => {
               text="Pratheeksha" 
               delay={0.4} 
               fontSize="clamp(3.5rem, 12vw, 9rem)"
+              animateOnLoad={true}
             />
           </div>
 
@@ -57,6 +58,7 @@ const HeroSection = () => {
               text="Atharvan" 
               delay={1.4} 
               fontSize="clamp(4rem, 14vw, 10rem)"
+              animateOnLoad={true}
             />
           </div>
         </div>
