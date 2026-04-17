@@ -105,10 +105,10 @@ const ThingsToKnowSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <p className="font-sans text-[11px] tracking-[0.6em] uppercase font-black mb-4 text-slate-400">
+          <p className="font-sans text-[11px] tracking-[0.6em] uppercase font-bold mb-4 text-[hsl(var(--burgundy))]">
             ✦ &nbsp; GUEST INFORMATION &nbsp; ✦
           </p>
-          <h2 className="font-feminine text-slate-800" style={{ fontSize: "clamp(2.5rem, 8vw, 5rem)" }}>
+          <h2 className="font-feminine text-wine-gradient" style={{ fontSize: "clamp(2.5rem, 8vw, 5rem)" }}>
             Details to Note
           </h2>
         </motion.div>

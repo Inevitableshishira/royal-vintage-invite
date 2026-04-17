@@ -271,10 +271,10 @@ const CouplePhotoSlideSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <p className="font-sans text-[10px] tracking-[0.5em] uppercase font-bold mb-3 text-[#c5a059]">
+            <p className="font-sans text-[10px] tracking-[0.5em] uppercase font-bold mb-3 text-[hsl(var(--wine))]">
               A Beautiful Journey
             </p>
-            <h2 className="font-feminine text-gold-gradient text-5xl md:text-7xl">
+            <h2 className="font-feminine text-plum-gradient text-5xl md:text-7xl">
               Our Memories
             </h2>
           </motion.div>
