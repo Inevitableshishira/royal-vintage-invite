@@ -1,7 +1,7 @@
 import { motion, useScroll, useSpring } from "framer-motion";
 import HeroSection from "@/components/wedding/HeroSection";
 import BrideGroomSection from "@/components/wedding/BrideGroomSection";
-import CouplePhotoSlideSection from "@/components/wedding/CouplePhotoSlideSection";
+
 import EventsSection from "@/components/wedding/EventsSection";
 import VenueSection from "@/components/wedding/VenueSection";
 import ThingsToKnowSection from "@/components/wedding/ThingsToKnowSection";
@@ -86,11 +86,7 @@ const Index = () => {
       {/* 🪔 Diya divider */}
       <TraditionalDivider variant="diya" fromColor="transparent" toColor="transparent" />
 
-      {/* COUPLE PHOTO SLIDESHOW */}
-      <PageReveal delay={0.08}><CouplePhotoSlideSection /></PageReveal>
 
-      {/* 🌺 Marigold mandala divider */}
-      <TraditionalDivider variant="marigold" fromColor="transparent" toColor="transparent" />
 
       {/* EVENTS */}
       <PageReveal delay={0.08}><EventsSection /></PageReveal>

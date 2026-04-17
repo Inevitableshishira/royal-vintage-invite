@@ -57,8 +57,9 @@ const EventCard = ({ title, bgSrc, time, date, venue, index, names }: EventCardP
                {title.includes("Maduve") ? "THE CEREMONY" : "THE CELEBRATION"}
             </p>
 
-            <h3 className="font-serif text-[clamp(2rem,6vw,2.8rem)] font-bold leading-[1] mb-8 tracking-tighter-framer text-center"
-              style={{ color: "hsl(335, 45%, 18%)" }}>
+            <h3 className={`font-serif text-[clamp(2.2rem,6.5vw,3rem)] font-black leading-[0.95] mb-8 tracking-tighter-framer text-center drop-shadow-sm ${
+              title.includes("Maduve") ? "text-saffron-gradient" : "text-plum-gradient"
+            }`}>
               {title}
             </h3>
 
@@ -83,9 +84,9 @@ const EventCard = ({ title, bgSrc, time, date, venue, index, names }: EventCardP
             )}
 
             <div className="flex flex-col items-center">
-              <p className="font-serif text-3xl font-bold italic tracking-wide" style={{ 
-                color: title.includes("Maduve") ? "hsl(345, 55%, 30%)" : "hsl(320, 40%, 30%)"
-              }}>
+              <p className={`font-serif text-3xl md:text-4xl font-black italic tracking-wide drop-shadow-sm ${
+                title.includes("Maduve") ? "text-kumkum-gradient" : "text-wine-gradient"
+              }`}>
                 {time}
               </p>
               <p className="text-label-caps text-[8px] mt-2" style={{ 
@@ -106,8 +107,7 @@ const EventCard = ({ title, bgSrc, time, date, venue, index, names }: EventCardP
         viewport={{ once: true }}
         transition={{ delay: 0.8 + index * 0.2, duration: 1, ease: [0.22, 1, 0.36, 1] }}
       >
-        <p className="font-sans text-2xl md:text-3xl font-black tracking-widest-luxury mb-3 drop-shadow-lg"
-          style={{ color: "hsl(335, 45%, 18%)" }}>
+        <p className="font-serif text-2xl md:text-3xl font-black tracking-widest-luxury mb-4 text-wine-gradient drop-shadow-md">
           {date.toUpperCase()}
         </p>
         <p className="font-traditional text-lg italic mb-10 drop-shadow-md" style={{ color: "hsl(15, 35%, 30%)" }}>
@@ -118,16 +118,12 @@ const EventCard = ({ title, bgSrc, time, date, venue, index, names }: EventCardP
           href={`https://maps.google.com/?q=${encodeURIComponent(venue + ", Chikkamagaluru")}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-5 px-16 py-6 border border-transparent backdrop-blur-md text-label-caps text-[10px] tracking-widest-luxury transition-all shadow-2xl rounded-full"
-          style={{ 
-            backgroundColor: "hsl(335, 45%, 18%)", 
-            color: "white" 
-          }}
+          className="inline-flex items-center gap-5 px-16 py-6 border border-[hsl(335,30%,70%)] bg-white/40 backdrop-blur-md text-label-caps text-[10px] font-bold tracking-widest-luxury transition-all shadow-xl hover:bg-white/60"
+          style={{ color: "hsl(335, 45%, 15%)" }}
           whileHover={{ 
             scale: 1.05, 
             y: -6,
-            backgroundColor: "hsl(335, 45%, 25%)",
-            boxShadow: "0 12px 40px rgba(100,40,70,0.4)",
+            boxShadow: "0 12px 40px rgba(100,40,70,0.15)",
           }}
           whileTap={{ scale: 0.97 }}
           transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}

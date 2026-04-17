@@ -17,7 +17,7 @@ const VenueSection = () => {
         </svg>
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col items-center">
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto flex flex-col items-center">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -41,7 +41,7 @@ const VenueSection = () => {
           
           {/* Main Visual */}
           <motion.div
-            className="md:col-span-12 lg:col-span-8 relative aspect-[21/11] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white"
+            className="md:col-span-12 lg:col-span-10 relative aspect-[16/9] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -54,14 +54,14 @@ const VenueSection = () => {
                 Khandya Planters&apos; Club
               </h3>
               <p className="font-sans text-xs md:text-sm tracking-[0.4em] uppercase font-black opacity-80">
-                Karnataka, Chikkamagaluru
+                Sangameshwarpet, Chikkamagaluru
               </p>
             </div>
           </motion.div>
 
           {/* Details Column */}
           <motion.div
-            className="md:col-span-12 lg:col-span-4 flex flex-col gap-6"
+            className="md:col-span-12 lg:col-span-2 flex flex-col gap-6"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -69,7 +69,7 @@ const VenueSection = () => {
           >
             {/* Merged Info Box — No Icons */}
             <div 
-              className="flex-1 bg-white p-10 rounded-[3rem] shadow-xl relative overflow-hidden border border-[#D2B48C]/30 flex flex-col justify-center"
+              className="flex-1 bg-white p-6 rounded-[3rem] shadow-xl relative overflow-hidden border border-[#D2B48C]/30 flex flex-col justify-center"
             >
               <div className="absolute top-[-20%] right-[-20%] w-64 h-64 opacity-[0.03] pointer-events-none grayscale">
                 <img src={mandalaImg} alt="" className="animate-spin-slow" />
@@ -79,7 +79,7 @@ const VenueSection = () => {
                 <p className="font-sans text-[11px] tracking-[0.4em] uppercase font-black text-slate-400 mb-4">Date & Time</p>
                 <p className="font-serif text-2xl md:text-3xl font-black text-slate-800 leading-tight">
                   Friday, May 8, 2026<br/>
-                  <span className="text-xl text-slate-500 font-bold italic">09:30 AM Onwards</span>
+                  <span className="text-xl text-slate-500 font-bold italic border-l-2 border-slate-300 pl-3">09:30 AM — 10:00 AM</span>
                 </p>
               </div>
 
