@@ -7,20 +7,22 @@ interface ModernAnimatedTextProps {
   fontSize: string;
   className?: string;
   animateOnLoad?: boolean;
+  gradientColors?: string[];
+  fontFamily?: string;
 }
 
 /**
  * ModernAnimatedText - SVG-Overlay version.
- * - Uses a hidden DOM span to ensure perfect word-wrapping and spacing.
- * - Overlays an SVG to render the text with zero-seam gradients.
- * - Animates characters individually using SVG tspan + Framer Motion.
+ * - Optimized with Precision Typography (Framer/Designer style tracking).
  */
 export const ModernAnimatedText = ({ 
   text, 
   delay = 0, 
   fontSize, 
   className = "",
-  animateOnLoad = false 
+  animateOnLoad = false,
+  gradientColors = ["#FFD700", "#FFF8DC", "#FFD700"],
+  fontFamily = "var(--font-feminine)"
 }: ModernAnimatedTextProps) => {
   const words = text.split(" ");
   const gradId = useId().replace(/:/g, "-");
@@ -36,9 +38,9 @@ export const ModernAnimatedText = ({
   const child = {
     hidden: { 
       opacity: 0, 
-      y: "0.2em", // Move up/down slightly
-      filter: "blur(10px)", 
-      scale: 0.9,
+      y: "0.2em",
+      filter: "blur(8px)", 
+      scale: 0.95,
     },
     visible: { 
       opacity: 1, 
@@ -47,14 +49,17 @@ export const ModernAnimatedText = ({
       scale: 1,
       transition: { 
         type: "spring", 
-        damping: 15, 
-        stiffness: 120 
+        damping: 20, 
+        stiffness: 150 
       }
     }
   };
 
   return (
-    <div className={`flex flex-wrap justify-center items-center gap-x-[0.25em] overflow-visible ${className}`} style={{ fontSize }}>
+    <div 
+      className={`flex flex-wrap justify-center items-center gap-x-[0.25em] overflow-visible ${className}`} 
+      style={{ fontSize, letterSpacing: "-0.05em" }}
+    >
       {words.map((word, wordIdx) => (
         <motion.div
           key={wordIdx}
@@ -67,26 +72,30 @@ export const ModernAnimatedText = ({
         >
           {/* 
             Invisible shadow word:
-            This sets the container's width/height perfectly based on the actual font measurement 
-            by the browser, ensuring the SVG correctly overlays and handles wrapping.
+            Using -0.05em letter-spacing for the high-end compressed look.
           */}
-          <span className="invisible select-none font-feminine leading-[1.4] whitespace-nowrap">
+          <span 
+            className="invisible select-none leading-[1.1] whitespace-nowrap" 
+            style={{ letterSpacing: "-0.01em", fontFamily }}
+          >
             {word}
           </span>
 
           <svg 
             className="absolute inset-0 w-full h-full overflow-visible pointer-events-none"
             style={{ 
-              filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.3))" 
+              filter: "none" 
             }}
           >
             <defs>
-              <linearGradient id={`${gradId}-${wordIdx}`} x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%"   stopColor="#FFD24D" />
-                <stop offset="30%"  stopColor="#FFEAA7" />
-                <stop offset="50%"  stopColor="#F39C12" />
-                <stop offset="70%"  stopColor="#FFEAA7" />
-                <stop offset="100%" stopColor="#FFD24D" />
+              <linearGradient id={`${gradId}-${wordIdx}`} x1="0%" y1="0%" x2="100%" y2="20%">
+                {gradientColors.map((color, i) => (
+                  <stop 
+                    key={i} 
+                    offset={`${(i / (gradientColors.length - 1)) * 100}%`} 
+                    stopColor={color} 
+                  />
+                ))}
               </linearGradient>
             </defs>
             <text
@@ -94,8 +103,16 @@ export const ModernAnimatedText = ({
               y="50%"
               dominantBaseline="central"
               textAnchor="middle"
-              className="font-feminine fill-transparent"
-              style={{ fontSize: "1em", fill: `url(#${gradId}-${wordIdx})` }}
+              className="fill-transparent"
+              style={{ 
+                fontSize: "1em", 
+                fontFamily,
+                fill: `url(#${gradId}-${wordIdx})`,
+                stroke: "rgba(0,0,0,0.6)",
+                strokeWidth: "0.4px",
+                letterSpacing: "-0.01em",
+                fontWeight: 900
+              }}
             >
               {Array.from(word).map((char, charIdx) => (
                 <motion.tspan

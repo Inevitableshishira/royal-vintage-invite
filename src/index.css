@@ -1,18 +1,127 @@
-@import "@fontsource/cormorant-garamond/300.css";
-@import "@fontsource/cormorant-garamond/400.css";
-@import "@fontsource/cormorant-garamond/500.css";
-@import "@fontsource/cormorant-garamond/600.css";
-@import "@fontsource/cormorant-garamond/700.css";
-@import "@fontsource/montserrat/300.css";
-@import "@fontsource/montserrat/400.css";
-@import "@fontsource/montserrat/500.css";
-@import "@fontsource/montserrat/600.css";
-@import url("https://fonts.googleapis.com/css2?family=Playball&family=Alice&family=Marcellus&display=swap");
+/* ── NEW PREMIUM FONTS ────────────────────────────────────────── */
+@font-face {
+  font-family: 'Aboreto';
+  src: url('https://fonts.gstatic.com/s/aboreto/v2/5DCXAKLhwDDQ4N8bpK3UAlyu.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  src: url('https://fonts.gstatic.com/s/cormorant/v24/H4cjBXOCl9bbnla_nHIq6quyoqOOag.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Infant';
+  src: url('https://fonts.gstatic.com/s/cormorantinfant/v22/HhyCU44g9vKiM1sORYSiWeAsLN99xfs9KOOc_agJPrgvYNWZjjhzkQ.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Unicase';
+  src: url('https://fonts.gstatic.com/s/cormorantunicase/v25/HI_QiZUaILtOqhqgDeXoF_n1_fTGX9vZlMIXxw.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Upright';
+  src: url('https://fonts.gstatic.com/s/cormorantupright/v19/VuJrdM3I2Y35poFONtLdafkUCHw1y1vdhDXUeA.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotu';
+  src: url('https://fonts.gstatic.com/s/gotu/v18/o-0FIpksx3QOpHsBi7h6.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://framerusercontent.com/assets/5vvr9Vy74if2I6bQbJvbw7SY1pQ.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter Display';
+  src: url('https://framerusercontent.com/assets/gazZKZuUEtvr9ULhdA4SprP0AZ0.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggqxSuXd.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yaldevi';
+  src: url('https://fonts.gstatic.com/s/yaldevi/v17/cY9afj6VW0NMrDWtDNzCOwlPMq9SLpdxJwvyZRPyBA.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('https://fonts.gstatic.com/s/playfairdisplay/v37/nuFvD7K6aS7Gu0T767ptY6r5f4at.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blue Mirage';
+  src: url('./assets/BlueMirage.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  src: url('https://fonts.gstatic.com/s/cinzel/v23/8vIQ7ww6m9mH2daZ.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
-  --font-feminine: "Playball", cursive;
-  --font-traditional: "Alice", serif;
-  --font-accent: "Marcellus", serif;
+  --font-feminine: "Cormorant Upright", serif;
+  --font-bold-royal: "Playfair Display", serif;
+  --font-cinzel: "Cinzel", serif;
+  --font-modern: "Poppins", sans-serif;
+  --font-custom: "Blue Mirage", cursive;
+  --font-traditional: "Gotu", serif;
+  --font-accent: "Aboreto", cursive;
+  --font-serif: "Cormorant", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Inter Display", system-ui, sans-serif;
 }
 
 @tailwind base;
@@ -21,242 +130,349 @@
 
 @layer base {
   :root {
-    --background: 154 30% 10%;
-    --foreground: 45 30% 90%;
+    /* Sophisticated Dark Emerald Palette (OKLCH based) */
+    --background: 154 30% 6%;
+    --foreground: 45 30% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 150 45% 12%;
+    --card: 154 30% 10%;
+    --card-foreground: 45 30% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 150 45% 12%;
+    --popover: 154 30% 8%;
+    --popover-foreground: 45 30% 95%;
 
-    --primary: 45 70% 40%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 45 70% 60%;
+    --primary-foreground: 154 30% 6%;
 
-    --secondary: 160 35% 45%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 160 35% 25%;
+    --secondary-foreground: 45 30% 95%;
 
-    --muted: 150 15% 94%;
-    --muted-foreground: 150 15% 40%;
+    --muted: 154 15% 20%;
+    --muted-foreground: 154 10% 70%;
 
-    --accent: 270 30% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 270 30% 60%;
+    --accent-foreground: 45 30% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 45 40% 80%;
-    --input: 150 20% 90%;
-    --ring: 45 70% 40%;
+    --border: 45 20% 30%;
+    --input: 154 20% 15%;
+    --ring: 45 70% 60%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    /* Wedding-specific tokens - Vibrant high-fidelity tones */
-    --emerald: 160 45% 25%;
-    --emerald-deep: 155 50% 15%;
-    --mint: 160 40% 70%;
-    --lavender: 270 35% 75%;
-    --lavender-soft: 270 25% 88%;
-    --gold: 41 100% 67%; /* #FFC857 soft premium gold */
-    --gold-light: 45 100% 85%;
-    --gold-dark: 35 70% 45%;
-    --navy: 215 50% 15%;
-    --cream: 45 100% 95%; /* #FFF8E7 ivory */
-    --rose: 340 40% 70%;
+    /* ── Precious Metals ── */
+    --gold: 41 100% 67%; 
+    --gold-bright: 45 100% 88%;
+    --gold-muted: 35 40% 50%;
+    --ivory: 45 60% 96%;
+    --emerald-void: 160 60% 4%;
 
-    --font-serif: "Cormorant Garamond", Georgia, serif;
-    --font-sans: "Montserrat", system-ui, sans-serif;
+    /* ── NEW: Romantic & Sacred Wedding Colors ── */
+    --rose-blush: 340 45% 65%;        /* Soft romantic blush */
+    --rose-deep: 345 55% 42%;         /* Deep rose for accents */
+    --rose-petal: 335 35% 78%;        /* Light petal pink */
+    --saffron: 28 85% 55%;            /* Sacred saffron/haldi */
+    --saffron-light: 35 80% 70%;      /* Light warm saffron */
+    --kumkum: 0 60% 35%;              /* Deep kumkum/vermillion */
+    --kumkum-bright: 355 70% 50%;     /* Brighter kumkum */
+    --marigold: 38 90% 50%;           /* Marigold orange */
+    --marigold-soft: 42 70% 65%;      /* Soft marigold */
+    --turmeric: 48 80% 55%;           /* Warm turmeric yellow */
+    --agarbatti: 270 25% 55%;         /* Sacred purple smoke */
+    --warm-ivory: 40 45% 92%;         /* Warmer than pure ivory */
+    --sandal: 30 35% 72%;             /* Sandalwood warm neutral */
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* ── Pink-Background Aware Colors ── */
+    --plum-deep: 320 40% 22%;         /* Deep plum for headings on pink bg */
+    --wine: 340 55% 28%;              /* Rich wine for body text on pink bg */
+    --berry-dark: 335 45% 18%;        /* Dark berry for max contrast on pink */
+    --bronze-antique: 25 50% 35%;     /* Warm antique bronze accent on pink bg */
+    --burgundy: 345 60% 25%;          /* Burgundy for labels on pink bg */
+    --mauve-deep: 310 30% 35%;        /* Mauve accent on pink bg */
+    --cocoa: 15 35% 30%;              /* Warm cocoa brown for muted text on pink */
+    --ivory-warm-dark: 35 30% 85%;    /* Warm ivory that reads on pink */
+    --cream-on-pink: 40 20% 92%;      /* Light cream readable on pink */
   }
 }
 
 @layer base {
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground antialiased;
     font-family: var(--font-sans);
-    position: relative;
-    min-height: 100vh;
+    letter-spacing: -0.01em;
+    background-color: #08120e;
+    
+    /* Dual Background Strategy */
+    background-image: 
+      url("./assets/wedding-background.png"),
+      url("./assets/wedding-background-bottom-v5.png");
+    background-position: center top, center 413.5vw;
+    background-repeat: no-repeat, repeat;
+    background-size: 100% auto, 600px auto;
+    background-attachment: scroll, scroll;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, .font-heading {
     font-family: var(--font-serif);
+    font-feature-settings: "lnum" 1, "kern" 1;
+    /* Framer style compression */
+    letter-spacing: -0.04em;
+    line-height: 0.95;
   }
 }
 
 @layer utilities {
-  .font-serif {
-    font-family: var(--font-serif);
-  }
-  .font-sans {
-    font-family: var(--font-sans);
-  }
-  .font-feminine {
-    font-family: var(--font-feminine);
-  }
-  .font-traditional {
-    font-family: var(--font-traditional);
-  }
-  /* Adaptive Typography for Light Backgrounds */
-  .text-on-light {
-    color: #0d2b21; /* Rich dark emerald */
-    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
-    font-weight: 600;
-  }
-  
-  .text-on-dark {
-    color: #FFF8E7; /* Ivory ivory */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  }
+  /* Precision Typography (Framer/Designer Grade) */
+  .tracking-tighter-framer { letter-spacing: -0.05em; }
+  .tracking-tight-framer { letter-spacing: -0.03em; }
+  .tracking-wide-luxury { letter-spacing: 0.3em; }
+  .tracking-widest-luxury { letter-spacing: 0.6em; }
 
-  .text-gold-rich {
-    color: #c5a059; /* Darker more saturated gold for light bgs */
-    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
-  }
+  /* Font Shorthands */
+  .font-feminine { font-family: var(--font-feminine); }
+  .font-traditional { font-family: var(--font-traditional); }
+  .font-accent { font-family: var(--font-accent); }
+  .font-display { font-family: var(--font-display); }
+  .font-unicase { font-family: "Cormorant Unicase", serif; }
+  .font-infant { font-family: "Cormorant Infant", serif; }
 
-  .text-fluid-h1 {
-    font-size: clamp(2.5rem, 10vw, 5rem);
-    line-height: 1.1;
-  }
-  .text-fluid-h2 {
-    font-size: clamp(2rem, 7vw, 3.5rem);
-    line-height: 1.2;
-  }
-  .text-fluid-label {
-    font-size: clamp(0.7rem, 2vw, 0.9rem);
-    letter-spacing: 0.4em;
+  /* Fluid Scales */
+  .text-hero { font-size: clamp(3.5rem, 15vw, 9rem); }
+  .text-display-h2 { font-size: clamp(2.5rem, 10vw, 6rem); }
+  .text-label-caps {
+    font-size: clamp(0.65rem, 1.5vw, 0.8rem);
     text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.5em;
   }
 
-  /* Precision Readability Shadows — Stronger for better visibility */
-  .text-shadow-adaptive {
-    text-shadow: 0 2px 6px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.6);
+  /* ── Sophisticated Depth (Glass Surfaces) ── */
+  .glass-emerald {
+    background: rgba(8, 18, 14, 0.7);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(197, 160, 89, 0.2);
   }
   
-  .gold-glow {
-    box-shadow: 0 0 20px hsl(var(--gold) / 0.3), 0 0 40px hsl(var(--gold) / 0.1);
-  }
-  .gold-glow-hover:hover {
-    box-shadow: 0 0 25px hsl(var(--gold) / 0.5), 0 0 50px hsl(var(--gold) / 0.2);
-  }
-  .gradient-emerald-lavender {
-    background: transparent;
-  }
-  .gradient-gold {
-    background: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)), hsl(var(--gold-light)));
-  }
-  .gradient-section-mint {
-    background: transparent;
-  }
-  .gradient-section-lavender {
-    background: transparent;
+  .glass-ivory {
+    background: rgba(253, 245, 230, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  /* Glass overlay for cards — subtle readability layer */
-  .section-glass {
-    background: rgba(10, 10, 20, 0.45);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    border: 1px solid hsl(45 70% 55% / 0.15);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  /* NEW: Warm glass surfaces with color tint */
+  .glass-rose {
+    background: rgba(180, 90, 110, 0.08);
+    backdrop-filter: blur(16px) saturate(150%);
+    border: 1px solid rgba(210, 130, 150, 0.15);
   }
 
-  /* Gold tint filter for decorative motif SVGs */
-  .motif-gold {
-    filter: sepia(1) saturate(3) hue-rotate(5deg) brightness(0.95);
+  .glass-saffron {
+    background: rgba(200, 140, 60, 0.06);
+    backdrop-filter: blur(16px) saturate(160%);
+    border: 1px solid rgba(220, 170, 90, 0.12);
   }
 
-  .text-shadow-premium {
-    text-shadow: 0 1px 3px rgba(0,0,0,0.45);
+  /* ── Gold Gradient Text ── */
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #c5a059 0%, #FDF5E6 50%, #c5a059 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* NEW: Rose-Gold Gradient Text — for feminine/romantic elements */
+  .text-rosegold-gradient {
+    background: linear-gradient(135deg, #c5a059 0%, #e8a4b8 40%, #FDF5E6 60%, #c5a059 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* NEW: Saffron Gradient Text — for sacred/ceremony elements */
+  .text-saffron-gradient {
+    background: linear-gradient(135deg, #d4862a 0%, #f0c75e 50%, #d4862a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* NEW: Kumkum Gradient — for auspicious highlights */
+  .text-kumkum-gradient {
+    background: linear-gradient(135deg, #8b2020 0%, #c75050 50%, #8b2020 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* ── Pink-BG Aware Gradient Texts ── */
+  .text-plum-gradient {
+    background: linear-gradient(135deg, hsl(320,40%,22%) 0%, hsl(340,55%,35%) 50%, hsl(320,40%,22%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-wine-gradient {
+    background: linear-gradient(135deg, hsl(345,60%,25%) 0%, hsl(340,50%,40%) 40%, hsl(25,50%,35%) 70%, hsl(345,60%,25%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-bronze-gradient {
+    background: linear-gradient(135deg, hsl(25,50%,30%) 0%, hsl(35,55%,45%) 50%, hsl(25,50%,30%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* ── Royal Border ── */
+  .border-gold-ornamental {
+    border: 1px solid transparent;
+    background: linear-gradient(#08120e, #08120e) padding-box,
+                linear-gradient(135deg, #c5a059, #FDF5E6, #c5a059) border-box;
+  }
+
+  /* NEW: Rose-Gold Border */
+  .border-rosegold-ornamental {
+    border: 1px solid transparent;
+    background: linear-gradient(#08120e, #08120e) padding-box,
+                linear-gradient(135deg, #c5a059, #e8a4b8, #FDF5E6, #c5a059) border-box;
+  }
+
+  /* Pink-BG Aware Borders — use deep plum/wine instead of gold */
+  .border-plum-ornamental {
+    border: 1px solid transparent;
+    background: linear-gradient(rgba(210,170,190,0.15), rgba(210,170,190,0.08)) padding-box,
+                linear-gradient(135deg, hsl(320,40%,30%), hsl(340,35%,50%), hsl(320,40%,30%)) border-box;
+  }
+
+  .border-wine-ornamental {
+    border: 1px solid transparent;
+    background: linear-gradient(rgba(200,160,175,0.1), rgba(200,160,175,0.05)) padding-box,
+                linear-gradient(135deg, hsl(345,60%,25%), hsl(25,45%,40%), hsl(345,60%,25%)) border-box;
+  }
+
+  /* NEW: Saffron accent border — left/top accent */
+  .border-l-saffron {
+    border-left: 2px solid hsl(28, 85%, 55%);
+  }
+  .border-l-rose {
+    border-left: 2px solid hsl(340, 45%, 65%);
+  }
+
+  /* ── Color-tinted Glows ── */
+  .glow-gold {
+    box-shadow: 0 0 30px rgba(197, 160, 89, 0.1), 0 0 60px rgba(197, 160, 89, 0.05);
+  }
+  .glow-rose {
+    box-shadow: 0 0 30px rgba(210, 130, 150, 0.1), 0 0 60px rgba(210, 130, 150, 0.05);
+  }
+  .glow-saffron {
+    box-shadow: 0 0 30px rgba(212, 134, 42, 0.1), 0 0 60px rgba(212, 134, 42, 0.05);
+  }
+  .glow-plum {
+    box-shadow: 0 0 30px rgba(100, 40, 70, 0.15), 0 0 60px rgba(100, 40, 70, 0.08);
+  }
+
+  /* ── Pink-BG Glass Surfaces ── */
+  .glass-pink-surface {
+    background: rgba(255, 235, 245, 0.25);
+    backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid rgba(160, 80, 110, 0.15);
+  }
+
+  .glass-blush {
+    background: rgba(255, 230, 240, 0.2);
+    backdrop-filter: blur(16px) saturate(130%);
+    border: 1px solid rgba(180, 100, 130, 0.12);
+  }
+
+  /* ── Colored Dividers ── */
+  .divider-rose {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(340 45% 65% / 0.4), transparent);
+  }
+  .divider-saffron {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(28 85% 55% / 0.4), transparent);
+  }
+  .divider-gold {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(41 100% 67% / 0.4), transparent);
+  }
+  .divider-plum {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(320 40% 30% / 0.4), transparent);
   }
 }
 
-/* Scrollbar styling */
+/* ── ANIMATIONS ────────────────────────────────────────── */
+@keyframes metallic-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-gold-shimmer {
+  background: linear-gradient(90deg, 
+    rgba(197, 160, 89, 0) 0%, 
+    rgba(253, 245, 230, 0.8) 50%, 
+    rgba(197, 160, 89, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: metallic-shimmer 3s infinite linear;
+}
+
+/* NEW: Rose shimmer for feminine elements */
+@keyframes rose-pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.animate-rose-pulse {
+  animation: rose-pulse 4s ease-in-out infinite;
+}
+
+/* NEW: Saffron glow for sacred elements */
+@keyframes saffron-glow {
+  0%, 100% { 
+    text-shadow: 0 0 4px rgba(212, 134, 42, 0.2);
+  }
+  50% { 
+    text-shadow: 0 0 20px rgba(212, 134, 42, 0.4), 0 0 40px rgba(212, 134, 42, 0.1);
+  }
+}
+
+.animate-saffron-glow {
+  animation: saffron-glow 5s ease-in-out infinite;
+}
+
+/* ── GLOBAL LAYOUT ─────────────────────────────────────── */
+
+/* Custom Selection — rose-gold tint */
+::selection {
+  background: #d4862a;
+  color: #08120e;
+}
+
+/* Scrollbar — warm gold/rose tint */
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: hsl(var(--muted));
+  background: #08120e;
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--gold) / 0.5);
+  background: linear-gradient(180deg, #c5a059, #e8a4b8);
   border-radius: 3px;
 }
 
-/* Gold shimmer animation */
-@keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-
-.gold-shimmer {
-  background: linear-gradient(90deg, hsl(var(--gold-dark)), hsl(var(--gold)), hsl(var(--gold-light)), hsl(var(--gold)), hsl(var(--gold-dark)));
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 4s linear infinite;
-  padding: 0.1em 0; /* CRITICAL: Prevents font descenders/ascenders from being clipped */
-  margin: -0.1em 0;
-}
-
-html {
-  scroll-behavior: auto !important;
-}
-
-body {
-  background-color: #0d1a16;
-  @apply text-foreground;
-  font-family: var(--font-sans);
-  position: relative;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  pointer-events: auto !important;
-  user-select: auto !important;
-  touch-action: pan-y; /* Fix unresponsive scrolling on fast swipes */
-}
-
-/* ── DUAL BACKGROUND SYSTEM (STACKED VERSION) ────────────────── */
-
-/* Layer 1: Top SceneryArtwork — Displays fully at the top */
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 413.5vw; /* Precise aspect ratio for the original temple artwork */
-  background-image: url("./assets/wedding-background.png");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: center top;
-  z-index: -5;
-  pointer-events: none;
-  filter: contrast(1.05) brightness(1.02) saturate(1.05);
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-}
-
-/* Layer 2: Bottom Pattern — Starts exactly where the scenery artwork ends */
-body::after {
-  content: "";
-  position: absolute;
-  top: 413.5vw; /* Anchor precisely to the bottom edge of the top image */
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("./assets/wedding-background-bottom-v5.png");
-  background-repeat: repeat;
-  background-size: 600px auto;
-  z-index: -10;
-  pointer-events: none;
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
