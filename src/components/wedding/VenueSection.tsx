@@ -17,7 +17,7 @@ const VenueSection = () => {
         </svg>
       </div>
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col items-center">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0 }}

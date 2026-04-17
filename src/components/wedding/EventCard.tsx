@@ -118,12 +118,16 @@ const EventCard = ({ title, bgSrc, time, date, venue, index, names }: EventCardP
           href={`https://maps.google.com/?q=${encodeURIComponent(venue + ", Chikkamagaluru")}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-5 px-16 py-6 border border-[hsl(335,30%,80%)] backdrop-blur-md text-label-caps text-[10px] tracking-widest-luxury transition-all shadow-2xl"
-          style={{ color: "hsl(335, 45%, 20%)" }}
+          className="inline-flex items-center gap-5 px-16 py-6 border border-transparent backdrop-blur-md text-label-caps text-[10px] tracking-widest-luxury transition-all shadow-2xl rounded-full"
+          style={{ 
+            backgroundColor: "hsl(335, 45%, 18%)", 
+            color: "white" 
+          }}
           whileHover={{ 
             scale: 1.05, 
             y: -6,
-            boxShadow: "0 12px 40px rgba(100,40,70,0.2)",
+            backgroundColor: "hsl(335, 45%, 25%)",
+            boxShadow: "0 12px 40px rgba(100,40,70,0.4)",
           }}
           whileTap={{ scale: 0.97 }}
           transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
