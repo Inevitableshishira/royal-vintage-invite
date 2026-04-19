@@ -46,7 +46,7 @@ const EventCard = ({ title, bgSrc, time, date, venue, index, names }: EventCardP
         {/* The Central Seal */}
         <div className="relative z-20 w-full h-full flex flex-col items-center justify-center p-8">
           <motion.div 
-            className="glass-blush p-10 md:p-14 rounded-[3.5rem] shadow-2xl flex flex-col items-center w-[92%] border border-[rgba(160,80,110,0.1)]"
+            className="glass-blush p-6 md:p-14 rounded-[3.5rem] shadow-2xl flex flex-col items-center w-[92%] border border-[rgba(160,80,110,0.1)]"
             initial={{ scale: 0.85, opacity: 0, filter: "blur(6px)" }}
             whileInView={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
             transition={{ delay: 0.6 + index * 0.2, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
@@ -84,7 +84,7 @@ const EventCard = ({ title, bgSrc, time, date, venue, index, names }: EventCardP
             )}
 
             <div className="flex flex-col items-center">
-              <p className={`font-serif text-3xl md:text-4xl font-black italic tracking-wide drop-shadow-sm whitespace-nowrap ${
+              <p className={`font-serif text-[1.4rem] xs:text-2xl md:text-3xl font-black italic tracking-wide drop-shadow-sm whitespace-nowrap ${
                 title.includes("Maduve") ? "text-kumkum-gradient" : "text-wine-gradient"
               }`}>
                 {time}

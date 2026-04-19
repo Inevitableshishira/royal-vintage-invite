@@ -78,7 +78,7 @@ const ThingsToKnowSection = () => {
     },
     {
       title: "Dress Gorgeously",
-      desc: "We look forward to seeing everyone in their finest Traditional Wedding Attire.",
+      desc: "Finest clothes of your choice , preferably traditional whichever is comfortable and makes you happy",
     },
   ];
 

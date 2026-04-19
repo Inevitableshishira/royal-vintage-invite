@@ -37,17 +37,20 @@ const HeroSection = () => {
           <motion.div
             className="mb-10 md:mb-16 select-text"
             initial={{ opacity: 0, y: 20, filter: "blur(2px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            viewport={{ once: true }}
             transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <motion.p
               className="font-traditional leading-[2.2] md:leading-[2.6] text-center"
               style={{
                 fontFamily: 'var(--font-traditional)',
-                fontSize: "clamp(0.75rem, 1.4vw, 1.05rem)",
-                lineHeight: "1.8",
+                fontSize: "clamp(0.95rem, 1.8vw, 1.25rem)",
+                lineHeight: "2.2",
                 letterSpacing: "0.05em",
-                color: "hsl(35, 30%, 45%)", /* Deep Sandalwood neutral */
+                color: "#FFD700", /* Bright Gold */
+                textShadow: "0 0 20px rgba(255, 215, 0, 0.6), 0 0 10px rgba(255, 215, 0, 0.3)", /* Intense Gold Highlights */
+                fontWeight: 800
               }}
             >
               ಕಲ್ಯಾಣದ್ಭುತ ಗಾತ್ರಾಯ ಕಾಮಿತಾರ್ಥ ಪ್ರದಾಯಿನೆ |<br />
@@ -57,9 +60,9 @@ const HeroSection = () => {
               className="mx-auto mt-6"
               style={{
                 width: "120px",
-                height: "1px",
-                background: "linear-gradient(90deg, transparent, #FFFFFF, #FDF5E6, #FFFFFF, transparent)",
-                opacity: 0.5,
+                height: "1.5px",
+                background: "linear-gradient(90deg, transparent, #FFD700, #FDF5E6, #FFD700, transparent)",
+                opacity: 0.8,
               }}
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
@@ -122,7 +125,7 @@ const HeroSection = () => {
             </motion.p>
           </div>
 
-          <div className="relative">
+          <div className="relative flex flex-col items-center">
             <ModernAnimatedText 
               text="Atharvan" 
               delay={1.6} 
@@ -132,6 +135,17 @@ const HeroSection = () => {
               fontFamily="var(--font-cinzel)"
               gradientColors={["#FFFFFF", "#FDF5E6", "#FFFFFF"]}
             />
+            <div className="-mt-4 md:-mt-8">
+              <ModernAnimatedText 
+                text="Hegde" 
+                delay={1.8} 
+                fontSize="clamp(3rem, 8vw, 6rem)"
+                animateOnLoad={true}
+                className="tracking-normal"
+                fontFamily="var(--font-cinzel)"
+                gradientColors={["#FFFFFF", "#FDF5E6", "#FFFFFF"]}
+              />
+            </div>
           </div>
         </div>
       </motion.div>
